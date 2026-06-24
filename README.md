@@ -16,3 +16,7 @@ JS Backend workshop
 - [x] Add book data layer
 - [x] Add service layer
 - [x] Render books on home page dynamically
+- [x] Show no movies screen
+
+### Create book
+- [x] Show create book page
