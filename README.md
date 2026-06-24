@@ -10,3 +10,6 @@ JS Backend workshop
 - [x] Setup static files
 - [x] Add about page
 - [x] Add layout
+
+### Architecture and dynamic rendering
+- [x] Add home controller

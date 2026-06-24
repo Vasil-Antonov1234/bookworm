@@ -1,5 +1,6 @@
 import express from "express";
 import { engine } from "express-handlebars";
+import homeController from "./controllers/homeController.js";
 
 const app = express();
 
@@ -9,14 +10,8 @@ app.engine("hbs", engine({
 app.set("view engine", "hbs");
 app.set("views", "./src/views");
 
-app.use(express.static("./src/public"))
+app.use(express.static("./src/public"));
 
-app.get("/", (req, res) => {
-    res.render("index");
-});
-
-app.get("/about", (req, res) => {
-    res.render("about");
-});
+app.use("/", homeController);
 
 app.listen(5000, () => console.log("Server is listening on http://localhost:5000..."));
