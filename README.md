@@ -20,3 +20,4 @@ JS Backend workshop
 
 ### Create book
 - [x] Show create book page
+- [x] Show 404 page
