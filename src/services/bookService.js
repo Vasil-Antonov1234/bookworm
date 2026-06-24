@@ -16,5 +16,13 @@ export default {
         } catch (error) {
             throw error;
         };
+    },
+
+    async getBookById(bookId) {
+        try {
+          return await bookRepository.getBookById(bookId);  
+        } catch (error) {
+            throw error;
+        };
     }
 }

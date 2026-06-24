@@ -42,5 +42,17 @@ export default {
         } catch (error) {
             throw error;
         };
+    },
+
+    async getBookById(bookId) {
+        try {
+          const data = await readData();
+          
+          const book = data.books.find((x) => x.id === bookId);
+
+          return book;
+        } catch (error) {
+            throw error;
+        };
     }
 }

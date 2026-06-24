@@ -17,6 +17,18 @@ bookController.post("/create", async (req, res) => {
     } catch (error) {
         console.log(error.message);
     };
+});
+
+bookController.get("/:bookId/details", async (req, res) => {
+    const bookId = req.params.bookId;
+
+    try {
+      const book = await bookService.getBookById(bookId);
+      
+      res.render("details", book);
+    } catch (error) {
+        console.log(error.message);
+    };
 })
 
 export default bookController;

@@ -26,4 +26,5 @@ JS Backend workshop
 - [x] Add unique id for each movie
 
 ### Details
-- [ ] Add navigation button for details page
+- [x] Add navigation button for details page
+- [x] Add route with params for details page
