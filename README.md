@@ -8,3 +8,5 @@ JS Backend workshop
 - [x] Add "home", "details", "create", "about", "search" and "404" pages
 - [x] Setup Handlebars
 - [x] Setup static files
+- [x] Add about page
+- [ ] Add layout
