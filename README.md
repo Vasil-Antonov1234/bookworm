@@ -24,3 +24,6 @@ JS Backend workshop
 - [x] Ready body data
 - [x] Install uuid
 - [x] Add unique id for each movie
+
+### Details
+- [ ] Add navigation button for details page
