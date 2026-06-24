@@ -1,0 +1,301 @@
+#details-page {
+  margin-top: 4em;
+  left: 50%;
+}
+
+.main_card {
+  color: #1B1B1F;
+  height: 500px auto;
+  margin: 50px auto;
+  display: flex;
+  max-width: 1000px;
+  background-color: #FFFDF6;
+  border: 1px solid #1B1B1F;
+  box-shadow: 10px 10px 0 #1B1B1F;
+  position: relative;
+}
+
+.main_card::before {
+  content: "ON LOAN";
+  position: absolute;
+  top: 24px;
+  right: -34px;
+  background: #C4291C;
+  color: #FFFDF6;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  padding: 6px 40px;
+  transform: rotate(35deg);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  z-index: 2;
+}
+
+#stars {
+  color: goldenrod;
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: 3px;
+}
+
+.card_left {
+  width: 570px;
+}
+
+.card_datails {
+  width: 96%;
+  padding: 50px;
+  margin-top: 0;
+}
+
+.card_datails h1 {
+  font-family: 'Special Elite', monospace;
+  font-weight: normal;
+  font-size: 1.8rem;
+  padding-bottom: 8px;
+  text-align: left;
+  border-bottom: 3px solid #C4291C;
+  margin-bottom: 0.6em;
+}
+
+.card_right img {
+  height: 100%;
+  width: 420px;
+  border-radius: 0;
+  filter: grayscale(0.1) contrast(1.05);
+  border-left: 1px solid #1B1B1F;
+}
+
+.card-book {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.PG,
+.card-genre,
+.card-director,
+.card-year {
+  color: #8A8475;
+  padding: 4px 0;
+  font-weight: 500;
+  border-radius: 0;
+  margin: 4px 0;
+  text-align: left;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.card-ranking {
+  color: #8A8475;
+  font-weight: 500;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.PG {
+  background: transparent;
+  box-shadow: none;
+}
+
+.disc {
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.65;
+  font-family: 'Source Serif 4', serif;
+  color: #1B1B1F;
+}
+
+.card-category {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #FFFDF6;
+  background: #2F4538;
+  display: inline-block;
+  padding: 4px 10px;
+  margin-top: 1em;
+}
+
+.social-btn {
+  margin-left: -10px;
+  margin-top: 2em;
+}
+
+.social-btn > .edit-btn,
+.del-btn {
+  color: #1B1B1F;
+  font-weight: 500;
+  border: 1px solid #1B1B1F;
+  padding: 12px 30px;
+  outline: none;
+  font-size: 14px;
+  font-family: 'IBM Plex Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 40px;
+  margin-left: 10px;
+  border-radius: 0;
+  box-shadow: 3px 3px 0 #1B1B1F;
+  transition: 150ms ease-in-out;
+}
+
+.del-btn {
+  background-color: #FFFDF6;
+}
+
+.edit-btn {
+  background-color: #FFFDF6;
+}
+
+.edit-btn:hover,
+.del-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 #C4291C;
+}
+
+.card {
+  margin-left: 4em;
+  width: 420px;
+  height: 510px;
+  background: #FFFDF6;
+  text-decoration: none;
+  color: #1B1B1F;
+  border: 1px solid #1B1B1F;
+  box-shadow: 6px 6px 0 #1B1B1F;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 0;
+  transition: all 0.15s ease-in;
+}
+
+.thumb > img {
+  height: 370px;
+  width: 100%;
+}
+
+.card:hover {
+  top: -2px;
+  box-shadow: 8px 8px 0 #C4291C;
+}
+
+article {
+  padding: 28px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+p {
+  flex: 1;
+  line-height: 1.4;
+}
+
+span {
+  font-size: 12px;
+  font-weight: 500;
+  font-family: 'IBM Plex Mono', monospace;
+  color: #8A8475;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 2em 0 0 0;
+}
+
+.thumb {
+  max-height: 350px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+
+.main-review-card {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  margin-top: 1em;
+}
+
+.review-card {
+  width: 280px;
+  background-color: #FFFDF6;
+  border: 1px solid #1B1B1F;
+  border-radius: 0;
+  color: #1B1B1F;
+  box-shadow: 5px 5px 0 #1B1B1F;
+}
+
+.review-info {
+  margin: 20px;
+  font-weight: normal;
+  font-family: 'Source Serif 4', serif;
+}
+
+.review-info h1 {
+  text-align: center;
+  font-family: 'Special Elite', monospace;
+  font-size: 1.2rem;
+}
+
+.review-info h3 {
+  margin-top: 5px;
+  display: inline-block;
+}
+
+.review-info span {
+  text-transform: none;
+  font-weight: 700;
+  margin-left: 4px;
+}
+
+.card-img img {
+  display: inline;
+  border-radius: 50%;
+  margin-left: 26%;
+  margin-top: 10px;
+  width: 150px;
+  height: 150px;
+  border: 1px solid #1B1B1F;
+}
+
+.PV {
+  color: #1B1B1F;
+  background: #F2EFE4;
+  border: 1px solid #1B1B1F;
+  box-shadow: none;
+  font-size: 16px;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.NV {
+  background: #2F4538;
+  color: #FFFDF6;
+  box-shadow: none;
+  font-size: 16px;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.PV,
+.NV {
+  max-width: 300px;
+  padding: 10px;
+  font-weight: 500;
+  border-radius: 0;
+  margin-left: 10px;
+}

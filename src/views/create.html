@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Create Page</title>
+
+    <!-- Do not forget to change the path to the css file -->
+    <link href="./static/css/style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="box">
+
+        <nav>
+            <!-- Do not forget to change the path to the image -->
+            <img src="./static/img/logo.jpg" alt="logo">
+
+            <ul class="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/create">Add Book</a></li>
+                <li><a href="/search">Search</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+
+        </nav>
+
+        <main>
+
+            <section id="create-page">
+                <div class="createSection">
+                    <div class="info">
+                        <h2>"It is a truth universally acknowledged, that a single man in possession of a good fortune must be in want of a wife." -Pride and Prejudice, 1813</h2>
+                    </div>
+
+                    <form action="#" method="" class="createForm">
+                        <h2>Add Book</h2>
+                        <ul class="noBullet">
+                            <li>
+                                <label for="title">Title:</label>
+                                <input type="text" class="inputFields" id="title" name="" value="" />
+                            </li>
+                            <li>
+                                <label for="category">Category:</label>
+                                <select id="category" class="inputFields" name="category">
+                                    <option value="">Select Category</option>
+                                    <option value="novel">Novel</option>
+                                    <option value="poetry">Poetry</option>
+                                    <option value="biography">Biography</option>
+                                    <option value="non-fiction">Non-Fiction</option>
+                                    <option value="short-story">Short Story</option>
+                                </select>
+                            </li>
+                            <li>
+                                <label for="genre">Genre:</label>
+                                <input type="text" class="inputFields" id="genre" name="" value="" />
+                            </li>
+                            <li>
+                                <label for="author">Author:</label>
+                                <input type="text" class="inputFields" id="author" name="" value="" />
+                            </li>
+                            <li>
+                                <label for="date">Year:</label>
+                                <input type="number" class="inputFields" id="year" name="" value="" />
+                            </li>
+                            <li>
+                                <label for="image">Book Cover:</label>
+                                <input type="text" class="inputFields" id="image" name="" value="" />
+                            </li>
+                            <li>
+                                <label for="image">Rating:</label>
+                                <input type="text" class="inputFields" id="rating" name="" value="" />
+                            </li>
+                            <li>
+                                <label for="description">Description:</label>
+                                <textarea id="description" class="inputFields" name="description"></textarea>
+                            </li>
+                         
+                            <li id="center-btn">
+                                <button id="create-btn">Add Book</button>
+                            </li>
+                        </ul>
+                    </form>
+                    
+
+                </div>
+            </section>
+
+        </main>
+
+
+        <footer>
+            © JS Back-End Workshop
+        </footer>
+    </div>
+
+
+</body>
+
+</html>

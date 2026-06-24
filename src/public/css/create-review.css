@@ -1,0 +1,86 @@
+.createReviewSection {
+  background-color: #FFFDF6;
+  margin: auto;
+  width: 740px;
+  height: 810px;
+  margin-top: 1rem;
+  left: 35%;
+  text-align: center;
+  display: flex;
+  color: #1B1B1F;
+  font-weight: normal;
+  border: 1px solid #1B1B1F;
+  box-shadow: 8px 8px 0 #1B1B1F;
+}
+
+.noBullet textarea {
+  resize: none;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.createReviewForm {
+  width: 720px;
+  padding: 30px 0;
+  transition: 0.2s;
+}
+
+.createReviewForm > h2 {
+  font-family: 'Special Elite', monospace;
+  font-weight: normal;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1em;
+  color: #1B1B1F;
+}
+
+#create-btn {
+  border: 1px solid #C4291C;
+  background: #FFFDF6;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #C4291C;
+  margin-top: 20px;
+  padding: 12px 40px;
+  cursor: pointer;
+  transform: rotate(-1deg);
+  box-shadow: 3px 3px 0 #C4291C;
+  transition: 0.15s;
+}
+
+#create-btn:hover {
+  background: #C4291C;
+  color: #FFFDF6;
+  transform: rotate(-1deg) translate(-2px, -2px);
+  box-shadow: 5px 5px 0 #1B1B1F;
+}
+
+.info-review {
+    width: 250px;
+    background: #1B1B1F;
+    padding: 55px 20px;
+    border-right: none;
+    display: flex;
+    align-items: center;
+}
+
+.info-review>h2 {
+    padding-top: 0;
+    font-weight: normal;
+    font-style: italic;
+    font-family: 'Source Serif 4', serif;
+    font-size: 1.2rem;
+    color: #F2EFE4;
+    line-height: 1.5;
+}
+
+.content-review {
+  height: 100px;
+}

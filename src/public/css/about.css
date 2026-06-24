@@ -1,0 +1,70 @@
+.full-screen {
+  background-color: #FFFDF6;
+  width: 98%;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 4%;
+  height: 530px;
+  color: #1B1B1F;
+  text-align: center;
+  border: 1px solid #1B1B1F;
+  box-shadow: 10px 10px 0 #1B1B1F;
+}
+
+.about {
+  padding-top: 2em;
+  padding: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
+
+.about .contact-img img {
+  width: 460px;
+  filter: grayscale(0.2) contrast(1.05);
+}
+
+.about-contact {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.about-contact #first, #second {
+    width: 300px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.about-contact h1 {
+    font-family: 'Special Elite', monospace;
+    font-size: 1.8rem;
+    margin-top: 50px;
+    color: #1B1B1F;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    border-bottom: 3px solid #C4291C;
+    display: inline-block;
+    padding-bottom: 0.3em;
+}
+
+.about-contact p {
+    font-size: 1.05rem;
+    padding: 5px;
+    font-family: 'IBM Plex Mono', monospace;
+    color: #1B1B1F;
+}
+
+.about-contact #address, #contacts {
+  margin-top: 20px;
+}
+
+.about .about-contact > p > a:hover {
+  color: #C4291C;
+}
+
+.about {
+  margin-top: 3em;
+}
