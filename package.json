@@ -1,0 +1,21 @@
+{
+  "name": "bookworm",
+  "version": "1.0.0",
+  "description": "JS Backend workshop",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vasil-Antonov1234/bookworm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Vasil-Antonov1234/bookworm/issues"
+  },
+  "homepage": "https://github.com/Vasil-Antonov1234/bookworm#readme"
+}
