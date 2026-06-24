@@ -9,4 +9,4 @@ JS Backend workshop
 - [x] Setup Handlebars
 - [x] Setup static files
 - [x] Add about page
-- [ ] Add layout
+- [x] Add layout
