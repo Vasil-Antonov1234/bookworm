@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Vasil-Antonov1234/bookworm/issues"
   },
-  "homepage": "https://github.com/Vasil-Antonov1234/bookworm#readme"
+  "homepage": "https://github.com/Vasil-Antonov1234/bookworm#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }
