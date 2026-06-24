@@ -8,5 +8,13 @@ export default {
         } catch (error) {
             throw error;
         };
+    },
+
+    async create(newBook) {
+        try {
+          await bookRepository.create(newBook);  
+        } catch (error) {
+            throw error;
+        };
     }
 }
