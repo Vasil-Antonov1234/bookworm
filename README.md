@@ -13,3 +13,6 @@ JS Backend workshop
 
 ### Architecture and dynamic rendering
 - [x] Add home controller
+- [x] Add book data layer
+- [x] Add service layer
+- [ ] Render books on home page dynamically

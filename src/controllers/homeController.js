@@ -1,9 +1,19 @@
 import { Router } from "express";
+import bookService from "../services/bookService.js";
 
 const homeController = Router();
 
-homeController.get("/", (req, res) => {
-    res.render("index");
+homeController.get("/", async (req, res) => {
+    
+    try {
+        const books = await bookService.getAll();
+
+        console.log(books)
+        
+        res.render("index");
+    } catch (error) {
+        console.log(error.message)
+    };
 });
 
 homeController.get("/about", (req, res) => {
