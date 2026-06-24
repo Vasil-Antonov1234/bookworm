@@ -7,10 +7,8 @@ homeController.get("/", async (req, res) => {
     
     try {
         const books = await bookService.getAll();
-
-        console.log(books)
-        
-        res.render("index");
+                
+        res.render("index", { books });
     } catch (error) {
         console.log(error.message)
     };

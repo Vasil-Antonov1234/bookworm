@@ -3,59 +3,24 @@
     <div class="band">
 
         <!-- If there are posts for book in the database display each of them -->
+        {{#each books}}
         <div class="flip flip-vertical">
             <div class="front">
-                <img src="./img/Dune.jpg" alt="Dune">
+                <img src={{imageUrl}} alt="Dune">
             </div>
             <div class="back">
-                <h1>Dune</h1>
-                <h2>Genre: Science Fiction</h2>
-                <p>Description: Set on the desert planet Arrakis, Dune is the story of the boy Paul Atreides, heir to a
-                    noble family tasked with ruling an inhospitable world where the only thing of value is the "spice"
-                    melange, a drug capable of extending life and enhancing consciousness. Coveted across the known
-                    universe, melange is a prize worth killing for. When House Atreides is betrayed, the destruction of
-                    Paul's family will set the boy on a journey toward a destiny greater than he ever could have
-                    imagined, and one that will change the course of history forever.</p>
+                <h1>{{title}}</h1>
+                <h2>Genre: {{genre}}</h2>
+                <p>Description: {{description}}</p>
                 <a href="#" class="details">Details</a>
             </div>
         </div>
-
-        <div class="flip flip-vertical">
-            <div class="front">
-                <img src="./img/PrideAndPrejudice.jpg" alt="Pride-and-Prejudice">
-            </div>
-            <div class="back">
-                <h1>Pride and Prejudice</h1>
-                <h2>Genre: Romance</h2>
-                <p>Description: Elizabeth Bennet, the second of five daughters in a respectable but not wealthy family,
-                    must navigate the rigid expectations of English society. When the wealthy and proud Mr. Darcy
-                    arrives in her neighborhood, first impressions create misunderstanding and friction between them. As
-                    pride and prejudice on both sides are gradually softened, Elizabeth and Darcy come to see each other
-                    in a truer light.</p>
-                <a href="#" class="details">Details</a>
-            </div>
-        </div>
-
-        <div class="flip flip-vertical">
-            <div class="front">
-                <img src="./img/Hobbit.jpg" alt="The-Hobbit">
-            </div>
-            <div class="back">
-                <h1>The Hobbit</h1>
-                <h2>Genre: Fantasy</h2>
-                <p>Description: Bilbo Baggins is a hobbit who enjoys a comfortable, unambitious life, rarely traveling
-                    further than the pantry of his hobbit-hole. But his contentment is disturbed when the wizard Gandalf
-                    and a company of thirteen dwarves arrive on his doorstep one day to whisk him away on an adventure.
-                    They have launched a plot to raid the treasure hoard guarded by the dragon Smaug, and Bilbo
-                    reluctantly joins their quest, sharpening his wits and skills along a journey that takes him from
-                    his snug, beloved hobbit-hole to the Lonely Mountain.</p>
-                <a href="#" class="details">Details</a>
-            </div>
-        </div>
-
+        {{!-- {{else}} --}}
         <!-- If there are still no posts in the database display: -->
-        <!-- <div class="no-posts">
-                        <p class="no-offer">There are no posts yet...</p>
-                    </div> -->
+        {{!-- <div class="no-posts">
+            <p class="no-offer">There are no posts yet...</p>
+        </div> --}}
+        {{/each}}
+    
     </div>
 </section>

@@ -4,9 +4,10 @@ export default {
     async getAll() {
         
         try {
-            const books = await fs.readFile("./src/db.json", { encoding: "utf-8"});
+            const dataJson = await fs.readFile("./src/db.json", { encoding: "utf-8"});
+            const data = JSON.parse(dataJson);
 
-            return JSON.parse(books);
+            return data.books;
         } catch (error) {
             throw error
         }

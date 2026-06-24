@@ -15,4 +15,4 @@ JS Backend workshop
 - [x] Add home controller
 - [x] Add book data layer
 - [x] Add service layer
-- [ ] Render books on home page dynamically
+- [x] Render books on home page dynamically
