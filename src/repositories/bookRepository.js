@@ -13,6 +13,15 @@ async function readData() {
 
 }
 
+async function writeData(newData) {
+
+    try {
+        await fs.writeFile("./src/db.json", JSON.stringify(newData, null, 2), { encoding: "utf-8" });
+    } catch (error) {
+        throw error;
+    };
+}
+
 export default {
     async getAll() {
         const data = await readData();
@@ -26,7 +35,7 @@ export default {
 
             data.books.push(newBook);
 
-            await fs.writeFile("./src/db.json", JSON.stringify(data));
+            await writeData(data);
         } catch (error) {
             throw error;
         };

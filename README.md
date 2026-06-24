@@ -22,3 +22,5 @@ JS Backend workshop
 - [x] Show create book page
 - [x] Show 404 page
 - [x] Ready body data
+- [x] Install uuid
+- [ ] Add unique id for each movie
