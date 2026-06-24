@@ -1,37 +1,37 @@
 {
-    "books": [
-        {
-            "id": "1",
-            "title": "Pride and Prejudice",
-            "genre": "Romance",
-            "author": "Jane Austen",
-            "year": "1813",
-            "rating": "4",
-            "description": "Elizabeth Bennet, the second of five daughters in a respectable but not wealthy family, must navigate the rigid expectations of English society. When the wealthy and proud Mr. Darcy arrives in her neighborhood, first impressions create misunderstanding and friction between them. As pride and prejudice on both sides are gradually softened, Elizabeth and Darcy come to see each other in a truer light.",
-            "category": "Novel",
-            "imageUrl": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1681804503i/129915654.jpg"
-        },
-        {
-            "id": "2",
-            "title": "Dune",
-            "genre": "Science Fiction",
-            "author": "Frank Herbert",
-            "year": "1965",
-            "rating": "5",
-            "description": "Set on the desert planet Arrakis, Dune is the story of the boy Paul Atreides, heir to a noble family tasked with ruling an inhospitable world where the only thing of value is the “spice” melange, a drug capable of extending life and enhancing consciousness. Coveted across the known universe, melange is a prize worth killing for...",
-            "category": "Novel",
-            "imageUrl": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1555447414i/44767458.jpg"
-        },
-        {
-            "id": "3",
-            "title": "The Hobbit",
-            "genre": "Fantasy",
-            "author": "J.R.R. Tolkien",
-            "year": "1937",
-            "rating": "5",
-            "description": "Smaug certainly looked fast asleep, when Bilbo peeped once more from the entrance. He was just about to step out onto the floor when he caught a sudden thin ray of red from under the drooping lid of Smaug's left eye. He was only pretending to be sleep! He was watching the tunnel entrance!",
-            "category": "Novel",
-            "imageUrl": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1371834025i/17157681.jpg"
-        }
-    ]
+  "books": [
+    {
+      "id": "1",
+      "title": "Pride and Prejudice",
+      "genre": "Romance",
+      "author": "Jane Austen",
+      "year": "1813",
+      "rating": "4",
+      "description": "Elizabeth Bennet, the second of five daughters in a respectable but not wealthy family, must navigate the rigid expectations of English society. When the wealthy and proud Mr. Darcy arrives in her neighborhood, first impressions create misunderstanding and friction between them. As pride and prejudice on both sides are gradually softened, Elizabeth and Darcy come to see each other in a truer light.",
+      "category": "Novel",
+      "imageUrl": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1681804503i/129915654.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Dune",
+      "genre": "Science Fiction",
+      "author": "Frank Herbert",
+      "year": "1965",
+      "rating": "5",
+      "description": "Set on the desert planet Arrakis, Dune is the story of the boy Paul Atreides, heir to a noble family tasked with ruling an inhospitable world where the only thing of value is the “spice” melange, a drug capable of extending life and enhancing consciousness. Coveted across the known universe, melange is a prize worth killing for...",
+      "category": "Novel",
+      "imageUrl": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1555447414i/44767458.jpg"
+    },
+    {
+      "id": "3",
+      "title": "The Hobbit",
+      "genre": "Fantasy",
+      "author": "J.R.R. Tolkien",
+      "year": "1937",
+      "rating": "5",
+      "description": "Smaug certainly looked fast asleep, when Bilbo peeped once more from the entrance. He was just about to step out onto the floor when he caught a sudden thin ray of red from under the drooping lid of Smaug's left eye. He was only pretending to be sleep! He was watching the tunnel entrance!",
+      "category": "Novel",
+      "imageUrl": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1371834025i/17157681.jpg"
+    }
+  ]
 }

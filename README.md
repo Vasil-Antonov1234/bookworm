@@ -23,4 +23,4 @@ JS Backend workshop
 - [x] Show 404 page
 - [x] Ready body data
 - [x] Install uuid
-- [ ] Add unique id for each movie
+- [x] Add unique id for each movie

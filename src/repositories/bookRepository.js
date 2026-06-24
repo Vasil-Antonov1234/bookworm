@@ -1,4 +1,5 @@
 import fs from "fs/promises";
+import { v4 as uuidV4 } from "uuid";
 
 async function readData() {
 
@@ -32,6 +33,8 @@ export default {
     async create(newBook) {
         try {
             const data = await readData();
+
+            newBook.id = uuidV4();
 
             data.books.push(newBook);
 
