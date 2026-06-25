@@ -34,8 +34,8 @@ JS Backend workshop
 - [x] Render all books
 - [x] Add patrial for each book
 - [x] Modify search form
-- [ ] Filter books
+- [x] Filter books
     - [x] By year
-    - [ ] By genre
+    - [x] By genre
     - [x] By title
 - [ ] Remember search words

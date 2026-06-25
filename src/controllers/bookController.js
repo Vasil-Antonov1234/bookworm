@@ -56,8 +56,11 @@ bookController.get("/search/book", async (req, res) => {
         if (searchData.title) {
             filteredBooks = filteredBooks.filter((x) => x.title.toLowerCase().includes(searchData.title.toLocaleLowerCase()));
         }
-        
 
+        if (searchData.genre) {
+            filteredBooks = filteredBooks.filter((x) => x.genre.toLocaleLowerCase().includes(searchData.genre.toLocaleLowerCase()));
+        }
+        
         res.render("books/search", { books: filteredBooks });
     } catch (error) {
         console.log(error.message)
