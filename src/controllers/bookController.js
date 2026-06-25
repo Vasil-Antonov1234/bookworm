@@ -32,9 +32,14 @@ bookController.get("/:bookId/details", async (req, res) => {
 });
 
 bookController.get("/search", async (req, res) => {
-    const books = await bookService.getAll();
-
-    res.render("books/search", { books })
-})
+    
+    try {
+        const books = await bookService.getAll();
+        
+        res.render("books/search", { books })
+    } catch (error) {
+        console.log(error)
+    };
+});
 
 export default bookController;
