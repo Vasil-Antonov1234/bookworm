@@ -42,12 +42,17 @@ bookController.get("/search", async (req, res) => {
     };
 });
 
-bookController.get("/search/book", (req, res) => {
+bookController.get("/search/book", async (req, res) => {
     const searchData = req.query;
+    
+    try {
+        const allBooks = await bookService.getAll();
+        const filteredBooks = allBooks.filter((x) => x.year.includes(searchData.year));
 
-    console.log(searchData)
-
-    res.end();
+        res.render("books/search", { books: filteredBooks });
+    } catch (error) {
+        console.log(error.message)
+    }
 })
 
 export default bookController;
