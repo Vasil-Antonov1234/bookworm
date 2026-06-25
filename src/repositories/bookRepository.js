@@ -44,7 +44,7 @@ export default {
         };
     },
 
-    async getBookById(bookId) {
+    async getById(bookId) {
         try {
           const data = await readData();
           

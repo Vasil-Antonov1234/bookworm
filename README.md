@@ -28,3 +28,6 @@ JS Backend workshop
 ### Details
 - [x] Add navigation button for details page
 - [x] Add route with params for details page
+
+### Search
+- [x] Show static search page

@@ -18,9 +18,9 @@ export default {
         };
     },
 
-    async getBookById(bookId) {
+    async getById(bookId) {
         try {
-          return await bookRepository.getBookById(bookId);  
+          return await bookRepository.getById(bookId);  
         } catch (error) {
             throw error;
         };
