@@ -39,3 +39,6 @@ JS Backend workshop
     - [x] By genre
     - [x] By title
 - [x] Remember search words
+### Bonus
+- [x] Dynamic page title
+- [ ] Rating

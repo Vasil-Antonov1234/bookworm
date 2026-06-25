@@ -4,21 +4,21 @@
         <div class="card_left">
             <div class="card_datails">
 
-                <h1>{{title}}</h1>
+                <h1>{{book.title}}</h1>
                 <div class="card-book">
                     <div class="first-info">
-                        <p class="card-genre">Genre: {{genre}}</p>
-                        <p class="card-director">Author: {{author}}</p>
+                        <p class="card-genre">Genre: {{book.genre}}</p>
+                        <p class="card-director">Author: {{book.author}}</p>
                     </div>
                     <div class="second-info">
-                        <p class="card-year">Year: {{year}}</p>
-                        <p class="card-ranking">Rating: <span id="stars">{{rating}}&#x2605;</span></p>
+                        <p class="card-year">Year: {{book.year}}</p>
+                        <p class="card-ranking">Rating: <span id="stars">{{book.rating}}&#x2605;</span></p>
                     </div>
 
                 </div>
 
-                <p class="disc">Description: {{description}}</p>
-                <p class="card-category">Category: {{category}}</p>
+                <p class="disc">Description: {{book.description}}</p>
+                <p class="card-category">Category: {{book.category}}</p>
             </div>
             <div class="details-btn">
                 <button id="edit-button">Edit</button>
@@ -26,7 +26,7 @@
             </div>
         </div>
         <div class="card_right">
-            <img src={{imageUrl}} alt={{title}}>
+            <img src={{book.imageUrl}} alt={{book.title}}>
         </div>
     </div>
 

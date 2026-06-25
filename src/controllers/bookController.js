@@ -4,7 +4,7 @@ import bookService from "../services/bookService.js";
 const bookController = Router();
 
 bookController.get("/create", (req, res) => {
-    res.render("books/create");
+    res.render("books/create", { pageTitle: "Create Book" });
 });
 
 bookController.post("/create", async (req, res) => {
@@ -25,7 +25,7 @@ bookController.get("/:bookId/details", async (req, res) => {
     try {
         const book = await bookService.getById(bookId);
 
-        res.render("books/details", book);
+        res.render("books/details", { book, pageTitle: "Book Details"} );
     } catch (error) {
         console.log(error.message);
     };
@@ -38,7 +38,7 @@ bookController.get("/search", async (req, res) => {
     try {
         const books = await bookService.getAll(searchData);
         
-        res.render("books/search", { books, searchData });
+        res.render("books/search", { books, searchData, pageTitle: "Search Book" });
     } catch (error) {
         console.log(error.message)
     }
