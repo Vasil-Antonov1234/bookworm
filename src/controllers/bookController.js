@@ -36,22 +36,9 @@ bookController.get("/search", async (req, res) => {
     const searchData = req.query;
 
     try {
-        const allBooks = await bookService.getAll();
-        let filteredBooks = allBooks;
-
-        if (searchData && searchData.year) {
-            filteredBooks = allBooks.filter((x) => x.year.includes(searchData.year));
-        }
-
-        if (searchData && searchData.title) {
-            filteredBooks = filteredBooks.filter((x) => x.title.toLowerCase().includes(searchData.title.toLocaleLowerCase()));
-        }
-
-        if (searchData && searchData.genre) {
-            filteredBooks = filteredBooks.filter((x) => x.genre.toLocaleLowerCase().includes(searchData.genre.toLocaleLowerCase()));
-        }
-
-        res.render("books/search", { books: filteredBooks });
+        const books = await bookService.getAll(searchData);
+        
+        res.render("books/search", { books, searchData });
     } catch (error) {
         console.log(error.message)
     }

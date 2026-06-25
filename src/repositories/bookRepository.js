@@ -24,10 +24,26 @@ async function writeData(newData) {
 }
 
 export default {
-    async getAll() {
+    async getAll(searchData) {
         const data = await readData();
 
-        return data.books;
+        const allBooks = data.books;
+
+        let filteredBooks = allBooks;
+
+        if (searchData && searchData.year) {
+            filteredBooks = allBooks.filter((x) => x.year === searchData.year);
+        }
+
+        if (searchData && searchData.title) {
+            filteredBooks = filteredBooks.filter((x) => x.title.toLowerCase().includes(searchData.title.toLocaleLowerCase()));
+        }
+
+        if (searchData && searchData.genre) {
+            filteredBooks = filteredBooks.filter((x) => x.genre.toLocaleLowerCase().includes(searchData.genre.toLocaleLowerCase()));
+        }
+
+        return filteredBooks;
     },
 
     async create(newBook) {
@@ -46,11 +62,11 @@ export default {
 
     async getById(bookId) {
         try {
-          const data = await readData();
-          
-          const book = data.books.find((x) => x.id === bookId);
+            const data = await readData();
 
-          return book;
+            const book = data.books.find((x) => x.id === bookId);
+
+            return book;
         } catch (error) {
             throw error;
         };

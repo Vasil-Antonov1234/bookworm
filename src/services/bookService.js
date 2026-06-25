@@ -1,10 +1,10 @@
 import bookRepository from "../repositories/bookRepository.js"
 
 export default {
-    async getAll() {
+    async getAll(searchData) {
         
         try {
-            return await bookRepository.getAll();
+            return await bookRepository.getAll(searchData);
         } catch (error) {
             throw error;
         };
