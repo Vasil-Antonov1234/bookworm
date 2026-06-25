@@ -37,5 +37,5 @@ JS Backend workshop
 - [ ] Filter books
     - [x] By year
     - [ ] By genre
-    - [ ] By title
+    - [x] By title
 - [ ] Remember search words
