@@ -11,6 +11,8 @@ export default {
     },
 
     async create(newBook) {
+        newBook.rating = Number(newBook.rating);
+
         try {
           await bookRepository.create(newBook);  
         } catch (error) {

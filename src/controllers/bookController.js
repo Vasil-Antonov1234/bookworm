@@ -22,10 +22,12 @@ bookController.post("/create", async (req, res) => {
 bookController.get("/:bookId/details", async (req, res) => {
     const bookId = req.params.bookId;
 
+    
     try {
         const book = await bookService.getById(bookId);
+        const stars = "&#x2605;".repeat(Math.floor(book.rating));
 
-        res.render("books/details", { book, pageTitle: "Book Details"} );
+        res.render("books/details", { book, pageTitle: "Book Details", stars } );
     } catch (error) {
         console.log(error.message);
     };
