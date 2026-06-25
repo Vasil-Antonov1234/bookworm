@@ -25,15 +25,16 @@ bookController.get("/:bookId/details", async (req, res) => {
     try {
       const book = await bookService.getById(bookId);
       
-      res.render("details", book);
+      res.render("books/details", book);
     } catch (error) {
         console.log(error.message);
     };
 });
 
-bookController.get("/search", (req, res) => {
+bookController.get("/search", async (req, res) => {
+    const books = await bookService.getAll();
 
-    res.render("search")
+    res.render("books/search", { books })
 })
 
 export default bookController;

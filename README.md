@@ -31,3 +31,10 @@ JS Backend workshop
 
 ### Search
 - [x] Show static search page
+- [x] Render all books
+- [ ] Modify search form
+- [ ] Filter books
+    - [ ] By year
+    - [ ] By genre
+    - [ ] By title
+- [ ] Remember search words
