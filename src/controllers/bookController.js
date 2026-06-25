@@ -42,4 +42,12 @@ bookController.get("/search", async (req, res) => {
     };
 });
 
+bookController.get("/search/book", (req, res) => {
+    const searchData = req.query;
+
+    console.log(searchData)
+
+    res.end();
+})
+
 export default bookController;

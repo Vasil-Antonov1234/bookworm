@@ -33,7 +33,7 @@ JS Backend workshop
 - [x] Show static search page
 - [x] Render all books
 - [x] Add patrial for each book
-- [ ] Modify search form
+- [x] Modify search form
 - [ ] Filter books
     - [ ] By year
     - [ ] By genre
