@@ -25,7 +25,8 @@ bookController.get("/:bookId/details", async (req, res) => {
     
     try {
         const book = await bookService.getById(bookId);
-        const stars = "&#x2605;".repeat(Math.floor(book.rating));
+
+        const stars = "1".repeat(Math.floor(book.rating)).split("");
 
         res.render("books/details", { book, pageTitle: "Book Details", stars } );
     } catch (error) {
