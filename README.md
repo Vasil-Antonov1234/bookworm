@@ -1,6 +1,8 @@
 # bookworm
 JS Backend workshop
 
+## Part one
+
 ### Setup
 - [x] Initialize project
 - [x] Add express server
@@ -41,4 +43,18 @@ JS Backend workshop
 - [x] Remember search words
 ### Bonus
 - [x] Dynamic page title
-- [ ] Rating
+- [x] Rating
+
+## Part two
+
+### Prerequsities
+- [x] Postgre SQL installed
+- [x] GUI Client
+
+### Setup database
+- [x] Install and setup typescript support
+- [x] Change npm start script to use tsx
+- [x] Install prisma related packages
+- [x] Initialize prisma
+- [x] Add database url and variable
+- [x] Geberate first client
