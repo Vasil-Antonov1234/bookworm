@@ -58,3 +58,7 @@ JS Backend workshop
 - [x] Initialize prisma
 - [x] Add database url and variable
 - [x] Geberate first client
+
+### Setup models
+- [x] Add Book model
+- [x] Migrate database
