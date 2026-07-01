@@ -27,3 +27,16 @@ model Book {
 
     @@map("books")
 }
+
+model Review {
+    id  Int @id @default(autoincrement())
+    name    String
+    rating  Float
+    title   String
+    content String
+    avatar  String
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+
+    @@map("reviews")
+}
