@@ -67,4 +67,4 @@ JS Backend workshop
 ### Refactor Books
 - [x] Remove uuid
 - [x] Create book
-- [ ] Read all books
+- [x] Read all books
