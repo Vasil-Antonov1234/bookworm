@@ -58,7 +58,13 @@ JS Backend workshop
 - [x] Initialize prisma
 - [x] Add database url and variable
 - [x] Geberate first client
+- [x] Instantiate prisma client
 
 ### Setup models
 - [x] Add Book model
 - [x] Migrate database
+
+### Refactor Books
+- [ ] Remove uuid
+- [ ] Create book
+- [ ] Read all books
