@@ -69,5 +69,15 @@ JS Backend workshop
 - [x] Create book
 - [x] Read all books
 - [x] Book details page
-- [ ] Remove file persistence releated code
+- [x] Remove file persistence releated code
+
+### Reviews
+- [x] Add resources
+- [ ] Add review page
+- [ ] Add cast model
+- [ ] Add review controller
+- [ ] Add review servise
+- [ ] Add review repository
+
+### Bonus
 - [ ] Search filter in db
