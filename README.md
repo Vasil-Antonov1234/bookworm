@@ -65,6 +65,6 @@ JS Backend workshop
 - [x] Migrate database
 
 ### Refactor Books
-- [ ] Remove uuid
-- [ ] Create book
+- [x] Remove uuid
+- [x] Create book
 - [ ] Read all books

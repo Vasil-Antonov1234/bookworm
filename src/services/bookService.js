@@ -12,6 +12,7 @@ export default {
 
     async create(newBook) {
         newBook.rating = Number(newBook.rating);
+        newBook.year = Number(newBook.year);
 
         try {
           await bookRepository.create(newBook);  

@@ -1,9 +1,10 @@
 import fs from "fs/promises";
-import { v4 as uuidV4 } from "uuid";
+import { prisma } from "../lib/prisma.js"
 
 async function readData() {
 
     try {
+        
         const dataJson = await fs.readFile("./src/db.json", { encoding: "utf-8" });
         const data = JSON.parse(dataJson);
 
@@ -48,13 +49,10 @@ export default {
 
     async create(newBook) {
         try {
-            const data = await readData();
 
-            newBook.id = uuidV4();
+            const book = await prisma.book.create({ data: newBook });
 
-            data.books.push(newBook);
-
-            await writeData(data);
+            return book;
         } catch (error) {
             throw error;
         };
