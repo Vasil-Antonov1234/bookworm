@@ -69,3 +69,5 @@ JS Backend workshop
 - [x] Create book
 - [x] Read all books
 - [x] Book details page
+- [ ] Remove file persistence releated code
+- [ ] Search filter in db
