@@ -66,9 +66,9 @@ export default {
 
     async getById(bookId) {
         try {
-            const data = await readData();
-
-            const book = data.books.find((x) => x.id === bookId);
+            const book = await prisma.book.findUnique({
+                where: { id: bookId }
+            });
 
             return book;
         } catch (error) {

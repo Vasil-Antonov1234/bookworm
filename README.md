@@ -68,3 +68,4 @@ JS Backend workshop
 - [x] Remove uuid
 - [x] Create book
 - [x] Read all books
+- [x] Book details page

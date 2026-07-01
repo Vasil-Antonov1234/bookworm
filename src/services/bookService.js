@@ -23,7 +23,7 @@ export default {
 
     async getById(bookId) {
         try {
-          return await bookRepository.getById(bookId);  
+          return await bookRepository.getById(Number(bookId));  
         } catch (error) {
             throw error;
         };
