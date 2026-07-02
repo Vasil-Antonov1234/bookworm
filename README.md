@@ -77,6 +77,7 @@ JS Backend workshop
 - [x] Add create review page
 - [x] Add review controller
 - [x] Add header link
+- [x] Refactor create review page and reviews table
 - [ ] Add review servise
 - [ ] Add review repository
 
