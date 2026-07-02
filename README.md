@@ -74,8 +74,8 @@ JS Backend workshop
 ### Reviews
 - [x] Add resources
 - [x] Add review model
-- [ ] Add review page
-- [ ] Add review controller
+- [x] Add create review page
+- [x] Add review controller
 - [ ] Add review servise
 - [ ] Add review repository
 
