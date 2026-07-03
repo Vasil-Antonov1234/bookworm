@@ -48,7 +48,15 @@ bookController.get("/search", async (req, res) => {
 });
 
 bookController.get("/:bookId/attach", async (req, res) => {
-    res.render("books/attach", { pageTitle: "Attach Review" });
+    const bookId = req.params.bookId;
+
+    try {
+        const book = await bookService.getById(bookId)
+        
+        res.render("books/attach", { book, pageTitle: "Attach Review" });
+    } catch (error) {
+        throw error;
+    };
 });
 
 export default bookController;

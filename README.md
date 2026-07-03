@@ -92,12 +92,12 @@ JS Backend workshop
 ### Atach Review to Book
 - [x] Add relation between books and reviews
 - [x] Add page view
-- [ ] Link to attach page
 - [ ] Add dynamic data
 - [ ] Populate review select
 - [ ] Attach function
 
 ### Show Reviews on Details Page
+- [ ] Link to attach page
 
 ### Bonus
 - [ ] Search filter in db
