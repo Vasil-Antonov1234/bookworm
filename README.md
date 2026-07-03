@@ -79,9 +79,12 @@ JS Backend workshop
 - [x] Add header link
 - [x] Refactor create review page and reviews table
 - [x] Add critic model
-- [ ] Add create critic page
+- [x] Add create critic page
+- [x] Add critic controller
 - [ ] Add review servise
 - [ ] Add review repository
+- [ ] Add critic servise
+- [ ] Add critic repository
 
 ### Bonus
 - [ ] Search filter in db
