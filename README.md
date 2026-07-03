@@ -78,6 +78,8 @@ JS Backend workshop
 - [x] Add review controller
 - [x] Add header link
 - [x] Refactor create review page and reviews table
+- [x] Add critic model
+- [ ] Add create critic page
 - [ ] Add review servise
 - [ ] Add review repository
 
