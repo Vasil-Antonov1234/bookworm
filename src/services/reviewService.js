@@ -11,5 +11,14 @@ export default {
         } catch (error) {
             throw error;
         };
+    },
+    async getAll() {
+
+        try {
+           return await reviewRepository.getAll();
+        } catch (error) {
+            throw error;
+        };
+
     }
 }

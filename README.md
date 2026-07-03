@@ -92,8 +92,8 @@ JS Backend workshop
 ### Atach Review to Book
 - [x] Add relation between books and reviews
 - [x] Add page view
-- [ ] Add dynamic data
-- [ ] Populate review select
+- [x] Add dynamic data
+- [x] Populate review select
 - [ ] Attach function
 
 ### Show Reviews on Details Page

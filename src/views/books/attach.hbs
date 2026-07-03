@@ -8,11 +8,11 @@
                 <label for="review">Review</label>
                 <select id="review" name="review">
                     <option value="none" selected>--------</option>
-                    <option value="Review 1">Review 1</option>
-                    <option value="Review 2">Review 2</option>
-                    <option value="Review 3">Review 3</option>
-                    <option value="Review 4">Review 4</option>
-                    <option value="Review 5">Review 5</option>
+
+                    {{#each reviews}}
+                    <option value={{id}}>{{title}}</option>
+                    {{/each}}
+                    
                 </select>
                 <div id="center-btn">
                     <button id="create-btn">Add Review</button>

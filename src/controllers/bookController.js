@@ -1,5 +1,6 @@
 import { Router } from "express";
 import bookService from "../services/bookService.js";
+import reviewService from "../services/reviewService.js";
 
 const bookController = Router();
 
@@ -52,8 +53,9 @@ bookController.get("/:bookId/attach", async (req, res) => {
 
     try {
         const book = await bookService.getById(bookId)
+        const reviews = await reviewService.getAll();
         
-        res.render("books/attach", { book, pageTitle: "Attach Review" });
+        res.render("books/attach", { book, reviews, pageTitle: "Attach Review" });
     } catch (error) {
         throw error;
     };

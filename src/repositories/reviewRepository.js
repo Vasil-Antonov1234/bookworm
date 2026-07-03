@@ -11,5 +11,12 @@ export default {
             throw error;
         }
         
+    },
+    async getAll() {
+        try {
+            return await prisma.review.findMany();
+        } catch (error) {
+            throw error;
+        };
     }
 }
