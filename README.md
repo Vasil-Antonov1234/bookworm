@@ -81,8 +81,10 @@ JS Backend workshop
 - [x] Add critic model
 - [x] Add create critic page
 - [x] Add critic controller
-- [ ] Add review servise
-- [ ] Add review repository
+- [x] Add review servise
+- [x] Add review repository
+
+
 - [ ] Add critic servise
 - [ ] Add critic repository
 
