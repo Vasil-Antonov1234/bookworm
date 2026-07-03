@@ -89,5 +89,15 @@ JS Backend workshop
 - [ ] Add critic servise
 - [ ] Add critic repository
 
+### Atach Review to Book
+- [ ] Add relation between books and reviews
+- [ ] Add page view
+- [ ] Link to attach page
+- [ ] Add dynamic data
+- [ ] Populate review select
+- [ ] Attach function
+
+### Show Reviews on Details Page
+
 ### Bonus
 - [ ] Search filter in db

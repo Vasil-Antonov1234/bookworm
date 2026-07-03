@@ -25,6 +25,8 @@ model Book {
     createdAt   DateTime @default(now())
     updatedAt   DateTime @updatedAt
 
+    reviews Review[]
+
     @@map("books")
 }
 
@@ -35,6 +37,8 @@ model Review {
     content String
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
+
+    books Book[]
 
     @@map("reviews")
 }
