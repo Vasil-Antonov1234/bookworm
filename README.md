@@ -90,8 +90,8 @@ JS Backend workshop
 - [ ] Add critic repository
 
 ### Atach Review to Book
-- [ ] Add relation between books and reviews
-- [ ] Add page view
+- [x] Add relation between books and reviews
+- [x] Add page view
 - [ ] Link to attach page
 - [ ] Add dynamic data
 - [ ] Populate review select

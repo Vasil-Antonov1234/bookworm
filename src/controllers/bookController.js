@@ -47,4 +47,8 @@ bookController.get("/search", async (req, res) => {
     }
 });
 
+bookController.get("/:bookId/attach", async (req, res) => {
+    res.render("books/attach", { pageTitle: "Attach Review" });
+});
+
 export default bookController;
