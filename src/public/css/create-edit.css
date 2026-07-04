@@ -87,10 +87,13 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .details-btn {
-  margin-left: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-#edit-button, #delete-button {
+#edit-button, #delete-button, #attach-button {
   border: 1px solid #1B1B1F;
   background: #FFFDF6;
   font-family: 'IBM Plex Mono', monospace;
@@ -113,7 +116,7 @@ input[type=number]::-webkit-outer-spin-button {
   box-shadow: 3px 3px 0 #C4291C;
 }
 
-#edit-button:hover, #delete-button:hover {
+#edit-button:hover, #delete-button:hover, #attach-button:hover {
   transform: translate(-2px, -2px);
   box-shadow: 5px 5px 0 #1B1B1F;
 }

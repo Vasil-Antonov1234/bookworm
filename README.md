@@ -98,7 +98,7 @@ JS Backend workshop
 
 ### Show Reviews on Details Page
 - [x] Modify book details view
-- [ ] Link to attach page
+- [x] Link to attach page
 
 ### Bonus
 - [ ] Search filter in db
