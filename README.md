@@ -99,6 +99,7 @@ JS Backend workshop
 ### Show Reviews on Details Page
 - [x] Modify book details view
 - [x] Link to attach page
+- [x] Show dynamic review
 
 ### Bonus
 - [ ] Search filter in db

@@ -43,7 +43,8 @@ export default {
     async getById(bookId) {
         try {
             const book = await prisma.book.findUnique({
-                where: { id: bookId }
+                where: { id: bookId },
+                include: { reviews: true }
             });
 
             return book;

@@ -32,11 +32,13 @@
     </div>
 
     <div class="main-review-card">
+        {{#each book.reviews}}
         {{>review}}
-        
+        {{else}}
         <div class="no-review">
             <p>There are no reviews added yet...</p>
         </div>
+        {{/each}}
     </div>
 
 </section>
