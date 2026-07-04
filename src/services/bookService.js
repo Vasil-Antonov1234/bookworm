@@ -27,5 +27,16 @@ export default {
         } catch (error) {
             throw error;
         };
+    },
+
+    async attach(bookId, reviewId) {
+
+        try {
+            const result = await bookRepository.attach(Number(bookId), Number(reviewId));
+
+            return result;
+        } catch (error) {
+            throw error;
+        };
     }
 }

@@ -61,4 +61,17 @@ bookController.get("/:bookId/attach", async (req, res) => {
     };
 });
 
+bookController.post("/:bookId/attach", async (req, res) => {
+    const bookId = req.params.bookId;
+    const reviewId = req.body.review;
+
+    try {
+        await bookService.attach(bookId, reviewId);
+
+        res.redirect(`/books/${bookId}/details`)
+    } catch (error) {
+        throw error;
+    };
+})
+
 export default bookController;

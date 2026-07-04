@@ -94,7 +94,7 @@ JS Backend workshop
 - [x] Add page view
 - [x] Add dynamic data
 - [x] Populate review select
-- [ ] Attach function
+- [x] Attach function
 
 ### Show Reviews on Details Page
 - [ ] Link to attach page

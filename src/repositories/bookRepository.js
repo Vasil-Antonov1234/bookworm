@@ -50,5 +50,23 @@ export default {
         } catch (error) {
             throw error;
         };
+    },
+
+    async attach(bookId, reviewId) {
+        
+        try {
+            const result = await prisma.book.update({
+                where: {id: bookId},
+                data: {
+                    reviews: {
+                        connect: {id: reviewId}
+                    }
+                }
+            });
+
+            return result;
+        } catch (error) {
+            throw error;
+        }
     }
 }
