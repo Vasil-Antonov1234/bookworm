@@ -97,7 +97,9 @@ JS Backend workshop
 - [x] Attach function
 
 ### Show Reviews on Details Page
+- [x] Modify book details view
 - [ ] Link to attach page
 
 ### Bonus
 - [ ] Search filter in db
+- [ ] Show filtered reviews in attach page
