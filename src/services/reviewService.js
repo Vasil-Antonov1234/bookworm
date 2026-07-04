@@ -12,10 +12,10 @@ export default {
             throw error;
         };
     },
-    async getAll() {
+    async getAll(filter) {
 
         try {
-           return await reviewRepository.getAll();
+           return await reviewRepository.getAll(filter);
         } catch (error) {
             throw error;
         };

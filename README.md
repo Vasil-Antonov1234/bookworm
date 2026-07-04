@@ -102,5 +102,5 @@ JS Backend workshop
 - [x] Show dynamic review
 
 ### Bonus
-- [ ] Search filter in db
 - [ ] Show filtered reviews in attach page
+- [ ] Search filter in db

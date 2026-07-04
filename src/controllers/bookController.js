@@ -52,8 +52,8 @@ bookController.get("/:bookId/attach", async (req, res) => {
     const bookId = req.params.bookId;
 
     try {
-        const book = await bookService.getById(bookId)
-        const reviews = await reviewService.getAll();
+        const book = await bookService.getById(bookId);
+        const reviews = await reviewService.getAll({excludeIds: book.reviews.map((x) => x.id) });
         
         res.render("books/attach", { book, reviews, pageTitle: "Attach Review" });
     } catch (error) {
