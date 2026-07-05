@@ -25,34 +25,21 @@ model Book {
     createdAt   DateTime @default(now())
     updatedAt   DateTime @updatedAt
 
-    reviews Review[]
+    critics Critic[]
 
     @@map("books")
 }
 
-model Review {
-    id  Int @id @default(autoincrement())
-    title   String
-    rating  Float
-    content String
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
-
-    books Book[]
-    critic Critic @relation(fields: [criticId], references: [id])
-    criticId Int
-
-    @@map("reviews")
-}
-
 model Critic {
   id  Int @id @default(autoincrement())
-  name  String
-  avatar  String
+  fullName  String
+  age Int
+  placeOfBorn String
+  image  String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  reviews Review[]
+  books Book[]
 
   @@map("critics")
 }

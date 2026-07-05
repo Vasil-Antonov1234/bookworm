@@ -8,7 +8,6 @@ const routes = Router();
 
 routes.use("/", homeController);
 routes.use("/books", bookController);
-routes.use("/reviews", reviewController);
 routes.use("/critics", criticController);
 
 routes.all("*page404", (req, res) => {

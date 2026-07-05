@@ -1,21 +1,21 @@
-<section id="attachReview">
-    <div class="attachReviewSection">
-        <h1>Attach New Review</h1>
+<section id="attachCritic">
+    <div class="attachCriticSection">
+        <h1>Attach New Critic</h1>
         <div class="attach-form">
             <h2>{{book.title}}</h2>
             <img class="book" src={{book.imageUrl}} alt={{book.title}}>
             <form method="post">
-                <label for="review">Review</label>
-                <select id="review" name="review">
+                <label for="critic">Critic</label>
+                <select id="critic" name="critic">
                     <option value="none" selected>--------</option>
 
-                    {{#each reviews}}
-                    <option value={{id}}>{{title}}</option>
+                    {{#each critics}}
+                    <option value={{id}}>{{fullName}}</option>
                     {{/each}}
                     
                 </select>
                 <div id="center-btn">
-                    <button id="create-btn">Add Review</button>
+                    <button id="create-btn">Add Critic</button>
                 </div>
             </form>
         </div>

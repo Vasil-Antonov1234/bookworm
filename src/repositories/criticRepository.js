@@ -10,5 +10,19 @@ export default {
         } catch (error) {
             throw error;
         };
+    },
+    async getAll(filter) {
+        try {
+            return await prisma.critic.findMany({
+                where: {
+                    id: {
+                        notIn: Array.isArray(filter.excludeIds) ?
+                            filter.excludeIds : Number.isInteger(filter.excludeIds) ? [filter.excludeIds] : []
+                    }
+                }
+            });
+        } catch (error) {
+            throw error;
+        };
     }
 }

@@ -1,6 +1,7 @@
 import { Router } from "express";
 import bookService from "../services/bookService.js";
 import reviewService from "../services/reviewService.js";
+import criticService from "../services/criticService.js";
 
 const bookController = Router();
 
@@ -53,9 +54,9 @@ bookController.get("/:bookId/attach", async (req, res) => {
 
     try {
         const book = await bookService.getById(bookId);
-        const reviews = await reviewService.getAll({excludeIds: book.reviews.map((x) => x.id) });
+        const critics = await criticService.getAll({excludeIds: book.critics.map((x) => x.id) });
         
-        res.render("books/attach", { book, reviews, pageTitle: "Attach Review" });
+        res.render("books/attach", { book, critics, pageTitle: "Attach Critic" });
     } catch (error) {
         throw error;
     };
@@ -63,10 +64,10 @@ bookController.get("/:bookId/attach", async (req, res) => {
 
 bookController.post("/:bookId/attach", async (req, res) => {
     const bookId = req.params.bookId;
-    const reviewId = req.body.review;
+    const criticId = req.body.critic;
 
     try {
-        await bookService.attach(bookId, reviewId);
+        await bookService.attach(bookId, criticId);
 
         res.redirect(`/books/${bookId}/details`)
     } catch (error) {

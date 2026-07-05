@@ -23,7 +23,7 @@
             <div class="details-btn">
                 <a href="#" id="edit-button">Edit</a>
                 <a href="#" id="delete-button">Delete</a>
-                <a href="/books/{{book.id}}/attach" id="attach-button">Attach review</a>
+                <a href="/books/{{book.id}}/attach" id="attach-button">Attach critic</a>
             </div>
         </div>
         <div class="card_right">
@@ -32,11 +32,11 @@
     </div>
 
     <div class="main-review-card">
-        {{#each book.reviews}}
-        {{>review}}
+        {{#each book.critics}}
+        {{>critic}}
         {{else}}
         <div class="no-review">
-            <p>There are no reviews added yet...</p>
+            <p>There are no critics added yet...</p>
         </div>
         {{/each}}
     </div>

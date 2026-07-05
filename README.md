@@ -73,33 +73,27 @@ JS Backend workshop
 
 ### Reviews
 - [x] Add resources
-- [x] Add review model
-- [x] Add create review page
-- [x] Add review controller
-- [x] Add header link
-- [x] Refactor create review page and reviews table
 - [x] Add critic model
 - [x] Add create critic page
 - [x] Add critic controller
-- [x] Add review servise
-- [x] Add review repository
-- [x] Modify create review form
-- [x] Add one to many relation from critics to reviews
-- [x] Modify create critic form
+- [x] Add header link
+- [x] Refactor create review page and critics table
+- [x] Add critic controller
 - [x] Add critic servise
 - [x] Add critic repository
+- [x] Modify create critic form
 
-### Atach Review to Book
-- [x] Add relation between books and reviews
+### Atach Critic to Book
+- [x] Add relation between books and critics
 - [x] Add page view
 - [x] Add dynamic data
-- [x] Populate review select
+- [x] Populate critic select
 - [x] Attach function
 
 ### Show Reviews on Details Page
 - [x] Modify book details view
 - [x] Link to attach page
-- [x] Show dynamic review
+- [x] Show dynamic critic
 
 ### Bonus
 - [ ] Show filtered reviews in attach page
