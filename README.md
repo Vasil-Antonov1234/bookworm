@@ -86,8 +86,8 @@ JS Backend workshop
 - [x] Modify create review form
 - [x] Add one to many relation from critics to reviews
 - [x] Modify create critic form
-- [ ] Add critic servise
-- [ ] Add critic repository
+- [x] Add critic servise
+- [x] Add critic repository
 
 ### Atach Review to Book
 - [x] Add relation between books and reviews
