@@ -85,7 +85,7 @@ JS Backend workshop
 - [x] Add review repository
 - [x] Modify create review form
 
-
+- [x] Add one to many relation from critics to reviews
 - [ ] Add critic servise
 - [ ] Add critic repository
 

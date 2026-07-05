@@ -39,6 +39,8 @@ model Review {
     updatedAt DateTime @updatedAt
 
     books Book[]
+    critic Critic @relation(fields: [criticId], references: [id])
+    criticId Int
 
     @@map("reviews")
 }
@@ -49,6 +51,8 @@ model Critic {
   avatar  String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  reviews Review[]
 
   @@map("critics")
 }
