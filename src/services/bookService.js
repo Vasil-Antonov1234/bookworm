@@ -1,8 +1,10 @@
 import bookRepository from "../repositories/bookRepository.js"
 
 export default {
-    async getAll(searchData) {
+    async getAll(searchData = {}) {
         
+        searchData.year = Number(searchData.year)
+
         try {
             return await bookRepository.getAll(searchData);
         } catch (error) {

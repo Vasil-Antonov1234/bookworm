@@ -1,29 +1,35 @@
 import { prisma } from "../lib/prisma.js"
 
 export default {
-    async getAll(searchData) {
+    async getAll(searchData = {}) {
         
         try {
 
             // TODO implement database filtering instead feltering in memory
             
-            const allBooks = await prisma.book.findMany();
+            const allBooks = await prisma.book.findMany({
+                where: {
+                    year: searchData.year || undefined, 
+                    title: { contains: searchData.title, mode: "insensitive" },
+                    genre: { contains: searchData.genre, mode: "insensitive" }
+                }
+            });
         
-            let filteredBooks = allBooks;
+            // let filteredBooks = allBooks;
     
-            if (searchData && searchData.year) {
-                filteredBooks = allBooks.filter((x) => x.year === searchData.year);
-            }
+            // if (searchData && searchData.year) {
+            //     filteredBooks = allBooks.filter((x) => x.year === searchData.year);
+            // }
     
-            if (searchData && searchData.title) {
-                filteredBooks = filteredBooks.filter((x) => x.title.toLowerCase().includes(searchData.title.toLocaleLowerCase()));
-            }
+            // if (searchData && searchData.title) {
+            //     filteredBooks = filteredBooks.filter((x) => x.title.toLowerCase().includes(searchData.title.toLocaleLowerCase()));
+            // }
     
-            if (searchData && searchData.genre) {
-                filteredBooks = filteredBooks.filter((x) => x.genre.toLocaleLowerCase().includes(searchData.genre.toLocaleLowerCase()));
-            }
+            // if (searchData && searchData.genre) {
+            //     filteredBooks = filteredBooks.filter((x) => x.genre.toLocaleLowerCase().includes(searchData.genre.toLocaleLowerCase()));
+            // }
     
-            return filteredBooks;
+            return allBooks;
         } catch (error) {
             throw error;
         };

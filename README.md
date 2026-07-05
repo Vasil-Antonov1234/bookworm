@@ -96,5 +96,5 @@ JS Backend workshop
 - [x] Show dynamic critic
 
 ### Bonus
-- [ ] Show filtered reviews in attach page
-- [ ] Search filter in db
+- [X] Show filtered reviews in attach page
+- [X] Search filter in db
