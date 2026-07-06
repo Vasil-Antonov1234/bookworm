@@ -50,7 +50,13 @@ export default {
         try {
             const book = await prisma.book.findUnique({
                 where: { id: bookId },
-                include: { critics: true }
+                include: {
+                    critics: {
+                        include: {
+                            critic: true
+                        }
+                    }
+                }
             });
 
             return book;
@@ -62,12 +68,10 @@ export default {
     async attach(bookId, criticId) {
         
         try {
-            const result = await prisma.book.update({
-                where: {id: bookId},
+            const result = await prisma.bookCrtic.create({
                 data: {
-                    critics: {
-                        connect: {id: criticId}
-                    }
+                    bookId: bookId,
+                    criticId: criticId
                 }
             });
 
