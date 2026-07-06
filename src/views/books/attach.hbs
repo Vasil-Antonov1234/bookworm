@@ -12,8 +12,12 @@
                     {{#each critics}}
                     <option value={{id}}>{{fullName}}</option>
                     {{/each}}
-                    
+
                 </select>
+                <div>
+                    <label for="review">Review:</label>
+                    <textarea id="review" class="inputFields review-content" name="review"></textarea>
+                </div>
                 <div id="center-btn">
                     <button id="create-btn">Add Critic</button>
                 </div>

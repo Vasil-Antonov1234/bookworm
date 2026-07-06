@@ -65,13 +65,14 @@ export default {
         };
     },
 
-    async attach(bookId, criticId) {
+    async attach(bookId, criticId, reviewContent) {
         
         try {
             const result = await prisma.bookCrtic.create({
                 data: {
                     bookId: bookId,
-                    criticId: criticId
+                    criticId: criticId,
+                    review: reviewContent
                 }
             });
 

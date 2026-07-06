@@ -96,3 +96,10 @@ input[type="number"]::-webkit-outer-spin-button {
 .attach-form option select{
     font-weight: 500;
 }
+
+.review-content {
+  width: 90%;
+  resize: none;
+  border: 1px solid black;
+  margin-bottom: -5px;
+}

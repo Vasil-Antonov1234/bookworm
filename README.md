@@ -83,6 +83,7 @@ JS Backend workshop
 - [x] Add critic repository
 - [x] Modify create critic form
 - [x] Create explicit BooksCritics join table and add review field
+- [x] Add review when attach a critic to a book
 
 ### Atach Critic to Book
 - [x] Add relation between books and critics
