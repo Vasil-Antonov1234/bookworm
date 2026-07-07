@@ -1,6 +1,5 @@
 import { Router } from "express";
 import bookService from "../services/bookService.js";
-import reviewService from "../services/reviewService.js";
 import criticService from "../services/criticService.js";
 
 const bookController = Router();
