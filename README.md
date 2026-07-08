@@ -110,3 +110,4 @@ JS Backend workshop
 - [x] Add register post action
 - [x] Add auth service
 - [x] Add users repository and users table
+- [x] Add create new user flow
