@@ -6,7 +6,10 @@ export default {
         
         try {
             const hashedPassword = await bcrypt.hash(userData.password, 10);
-            const newUser = await usersRepository.create({ email: userData.email, password: hashedPassword });
+            const newUser = await usersRepository.create({ 
+                ...userData, 
+                password: hashedPassword 
+            });
     
             return newUser;
         } catch (error) {

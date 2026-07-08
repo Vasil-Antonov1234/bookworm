@@ -5,7 +5,10 @@ export default {
         
         try {
             const newUser = await prisma.user.create({
-                data: {...userData}
+                data: {
+                    email: userData.email,
+                    password: userData.password
+                }
             });
 
             return newUser;

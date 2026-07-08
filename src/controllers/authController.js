@@ -20,4 +20,8 @@ authController.post("/register", async (req, res) => {
 
 });
 
+authController.get("/login", (req, res) => {
+    res.render("auth/login", {pageTitle: "Login Page"});
+});
+
 export default authController;

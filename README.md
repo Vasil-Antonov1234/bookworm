@@ -112,3 +112,10 @@ JS Backend workshop
 - [x] Add users repository and users table
 - [x] Add create new user flow
 - [x] Save hashed user password into database
+
+### Login
+- [x] Add login page
+- [ ] Add login post action
+- [ ] Add login service method
+- [ ] Add login repository method
+- [ ] Validate password
