@@ -13,7 +13,7 @@ authController.post("/register", async (req, res) => {
     try {
         const newUser = await authService.register(userData);
     
-        res.redirect("/");
+        res.redirect("/auth/login");
     } catch (error) {
         throw error;
     };
@@ -22,6 +22,14 @@ authController.post("/register", async (req, res) => {
 
 authController.get("/login", (req, res) => {
     res.render("auth/login", {pageTitle: "Login Page"});
+});
+
+authController.post("/login", async (req, res) => {
+    const userData = req.body;
+
+    console.log(userData);
+
+    res.redirect("/");
 });
 
 export default authController;
