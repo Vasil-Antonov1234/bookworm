@@ -1,17 +1,18 @@
 import { Router } from "express";
+import authService from "../services/authService.js";
 
 const authController = Router();
 
 authController.get("/register", (req, res) => {
-    res.render("users/register", {pageTitle: "Register Page"});
+    res.render("auth/register", {pageTitle: "Register Page"});
 });
 
 authController.post("/register", async (req, res) => {
     const userData = req.body;
 
-    console.log(userData);
+    const newUser = await authService.register(userData);
 
-    res.end();
-})
+    res.redirect("/");
+});
 
 export default authController;

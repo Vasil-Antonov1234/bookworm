@@ -9,7 +9,7 @@ const routes = Router();
 routes.use("/", homeController);
 routes.use("/books", bookController);
 routes.use("/critics", criticController);
-routes.use("/users", authController);
+routes.use("/auth", authController);
 
 routes.all("*page404", (req, res) => {
     res.render("404");

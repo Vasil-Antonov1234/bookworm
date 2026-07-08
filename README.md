@@ -108,3 +108,4 @@ JS Backend workshop
 - [x] Add auth controller
 - [x] Modify register page
 - [x] Add register post action
+- [x] Add auth service
