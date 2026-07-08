@@ -100,3 +100,8 @@ JS Backend workshop
 ### Bonus
 - [X] Show filtered reviews in attach page
 - [X] Search filter in db
+
+## Part Three Session and Authentication
+- [x] Add register, login and edit pages
+
+### Register
