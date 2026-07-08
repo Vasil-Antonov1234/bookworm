@@ -105,3 +105,6 @@ JS Backend workshop
 - [x] Add register, login and edit pages
 
 ### Register
+- [x] Add auth controller
+- [ ] Modify register page
+- [ ] Add register post action
