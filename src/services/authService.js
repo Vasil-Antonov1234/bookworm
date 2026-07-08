@@ -16,5 +16,15 @@ export default {
             throw error;
         }
         
+    },
+    async login(userData) {
+        
+        try {
+            const user = await usersRepository.getUserByEmail(userData.email);
+
+            
+        } catch (error) {
+            throw error;
+        };
     }
 }

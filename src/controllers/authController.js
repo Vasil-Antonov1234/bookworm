@@ -15,7 +15,7 @@ authController.post("/register", async (req, res) => {
     
         res.redirect("/auth/login");
     } catch (error) {
-        throw error;
+        console.log(error.message);
     };
 
 });
@@ -27,7 +27,11 @@ authController.get("/login", (req, res) => {
 authController.post("/login", async (req, res) => {
     const userData = req.body;
 
-    console.log(userData);
+    try {
+        const result = await authService.login(userData);
+    } catch (error) {
+        console.log(error.message);
+    }
 
     res.redirect("/");
 });

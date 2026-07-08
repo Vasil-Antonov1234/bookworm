@@ -116,6 +116,6 @@ JS Backend workshop
 ### Login
 - [x] Add login page
 - [x] Add login post action
-- [ ] Add login service method
-- [ ] Add login repository method
+- [x] Add login service method
+- [x] Add login repository method
 - [ ] Validate password

@@ -16,5 +16,20 @@ export default {
             throw error;
         };
 
+    },
+    async getUserByEmail(email) {
+        
+        try {
+            const user = await prisma.user.findUnique({
+                where: {
+                    email
+                }
+            });
+
+            return user;
+        } catch (error) {
+            throw error
+        };
+
     }
 }
