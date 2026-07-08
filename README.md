@@ -107,4 +107,4 @@ JS Backend workshop
 ### Register
 - [x] Add auth controller
 - [x] Modify register page
-- [ ] Add register post action
+- [x] Add register post action
