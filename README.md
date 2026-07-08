@@ -109,3 +109,4 @@ JS Backend workshop
 - [x] Modify register page
 - [x] Add register post action
 - [x] Add auth service
+- [x] Add users repository and users table
