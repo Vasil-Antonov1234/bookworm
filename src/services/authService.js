@@ -22,7 +22,16 @@ export default {
         try {
             const user = await usersRepository.getUserByEmail(userData.email);
 
-            
+            if (!user) {
+                throw new Error("Wrong user or password!");
+            };
+
+            const isPasswordValid = await bcrypt.compare(userData.password, user.password);
+
+            if(!isPasswordValid) {
+                throw new Error("Wrong user or password!");
+            };
+
         } catch (error) {
             throw error;
         };

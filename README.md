@@ -118,4 +118,4 @@ JS Backend workshop
 - [x] Add login post action
 - [x] Add login service method
 - [x] Add login repository method
-- [ ] Validate password
+- [x] Validate password
