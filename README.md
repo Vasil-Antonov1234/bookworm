@@ -111,3 +111,4 @@ JS Backend workshop
 - [x] Add auth service
 - [x] Add users repository and users table
 - [x] Add create new user flow
+- [x] Save hashed user password into database

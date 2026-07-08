@@ -11,7 +11,7 @@ authController.post("/register", async (req, res) => {
     const userData = req.body;
 
     try {
-        const newUser = await authService.register({email: userData.email, password: userData.password});
+        const newUser = await authService.register(userData);
     
         res.redirect("/");
     } catch (error) {
