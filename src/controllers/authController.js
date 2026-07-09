@@ -28,7 +28,9 @@ authController.post("/login", async (req, res) => {
     const userData = req.body;
 
     try {
-        const result = await authService.login(userData);
+        const token = await authService.login(userData);
+
+        console.log(token)
         res.redirect("/");
     } catch (error) {
         res.send(error.message);

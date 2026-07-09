@@ -119,3 +119,4 @@ JS Backend workshop
 - [x] Add login service method
 - [x] Add login repository method
 - [x] Validate password
+- [x] Issue jwt token

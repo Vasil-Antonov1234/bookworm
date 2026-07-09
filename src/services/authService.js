@@ -1,5 +1,6 @@
 import usersRepository from "../repositories/usersRepository.js"
 import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
 
 export default {
     async register(userData) {
@@ -31,6 +32,11 @@ export default {
             if(!isPasswordValid) {
                 throw new Error("Wrong user or password!");
             };
+
+            const payload = {userId: user.id, userEmail: user.email};
+            const token = jwt.sign(payload, "qwes4354esdfgdsfdwe", { expiresIn: "1h"});
+
+            return token;
 
         } catch (error) {
             throw error;
