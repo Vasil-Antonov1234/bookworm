@@ -1,6 +1,7 @@
 import usersRepository from "../repositories/usersRepository.js"
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
+import { JWT_SECRET } from "../config/constants.js";
 
 export default {
     async register(userData) {
@@ -34,7 +35,7 @@ export default {
             };
 
             const payload = {userId: user.id, userEmail: user.email};
-            const token = jwt.sign(payload, "qwes4354esdfgdsfdwe", { expiresIn: "1h"});
+            const token = jwt.sign(payload, JWT_SECRET, { expiresIn: "1h"});
 
             return token;
 
