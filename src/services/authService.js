@@ -34,7 +34,7 @@ export default {
                 throw new Error("Wrong user or password!");
             };
 
-            const payload = {userId: user.id, userEmail: user.email};
+            const payload = {id: user.id, email: user.email};
             const token = jwt.sign(payload, JWT_SECRET, { expiresIn: "1h"});
 
             return token;
