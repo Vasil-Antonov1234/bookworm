@@ -127,3 +127,4 @@ JS Backend workshop
 - [x] Setup cookie parser
 - [x] Validate token
 - [x] Add isAuthenticated guard
+- [x] Add isGuest guard

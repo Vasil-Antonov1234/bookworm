@@ -29,3 +29,12 @@ export function isAuthenticated(req, res, next) {
 
     next();
 };
+
+export function isGuest(req, res, next) {
+
+    if (res.user) {
+        return res.redirect("/");
+    }
+
+    next();
+};
