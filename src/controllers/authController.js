@@ -30,7 +30,8 @@ authController.post("/login", async (req, res) => {
     try {
         const token = await authService.login(userData);
 
-        console.log(token)
+        res.cookie("auth", token, { httpOnly: true });
+        
         res.redirect("/");
     } catch (error) {
         res.send(error.message);

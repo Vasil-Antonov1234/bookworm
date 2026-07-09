@@ -120,3 +120,4 @@ JS Backend workshop
 - [x] Add login repository method
 - [x] Validate password
 - [x] Issue jwt token
+- [x] Retur token in cookie
