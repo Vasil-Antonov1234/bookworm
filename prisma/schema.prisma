@@ -25,6 +25,9 @@ model Book {
     createdAt   DateTime @default(now())
     updatedAt   DateTime @updatedAt
 
+    userId  Int?
+    owner User? @relation(fields: [userId], references: [id])
+
     critics BooksCrtics[]
 
     @@map("books")
@@ -62,6 +65,8 @@ model User {
     password    String
     createdAt   DateTime    @default(now())
     updatedAt   DateTime    @updatedAt
+
+    books Book[]
 
     @@map("users")
 }

@@ -133,6 +133,6 @@ JS Backend workshop
 - [x] Add isGuest guard
 
 ### Edit and Delete Book
-- [ ] Add user-book relation
+- [x] Add user-book relation
 
 ### Dynamic Navigation
