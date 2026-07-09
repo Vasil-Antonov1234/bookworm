@@ -11,9 +11,10 @@ bookController.get("/create", isAuthenticated, (req, res) => {
 
 bookController.post("/create", isAuthenticated, async (req, res) => {
     const newBook = req.body;
+    const ownerId = res.user.id;
 
     try {
-        await bookService.create(newBook);
+        await bookService.create(newBook, ownerId);
 
         res.redirect("/");
     } catch (error) {
