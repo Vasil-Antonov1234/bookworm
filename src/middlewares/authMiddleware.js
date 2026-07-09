@@ -20,3 +20,12 @@ export function authMiddleware(req, res, next) {
 
     next();
 };
+
+export function isAuthenticated(req, res, next) {
+
+    if (!res.user) {
+        return res.redirect("/auth/login")
+    }
+
+    next();
+};

@@ -126,3 +126,4 @@ JS Backend workshop
 - [x] Create auth moddleware
 - [x] Setup cookie parser
 - [x] Validate token
+- [x] Add isAuthenticated guard

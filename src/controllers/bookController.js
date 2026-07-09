@@ -1,14 +1,15 @@
 import { Router } from "express";
 import bookService from "../services/bookService.js";
 import criticService from "../services/criticService.js";
+import { isAuthenticated } from "../middlewares/authMiddleware.js";
 
 const bookController = Router();
 
-bookController.get("/create", (req, res) => {
+bookController.get("/create", isAuthenticated, (req, res) => {
     res.render("books/create", { pageTitle: "Create Book" });
 });
 
-bookController.post("/create", async (req, res) => {
+bookController.post("/create", isAuthenticated, async (req, res) => {
     const newBook = req.body;
 
     try {
@@ -48,7 +49,7 @@ bookController.get("/search", async (req, res) => {
     }
 });
 
-bookController.get("/:bookId/attach", async (req, res) => {
+bookController.get("/:bookId/attach", isAuthenticated, async (req, res) => {
     const bookId = req.params.bookId;
 
     try {
@@ -61,7 +62,7 @@ bookController.get("/:bookId/attach", async (req, res) => {
     };
 });
 
-bookController.post("/:bookId/attach", async (req, res) => {
+bookController.post("/:bookId/attach", isAuthenticated, async (req, res) => {
     const bookId = req.params.bookId;
     const criticId = req.body.critic;
     const reviewContent = req.body.review;
