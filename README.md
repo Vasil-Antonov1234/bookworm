@@ -122,9 +122,17 @@ JS Backend workshop
 - [x] Issue jwt token
 - [x] Retur token in cookie
 
+### Loguot
+- [x] Add logout
+
 ### Authentication and Authorization
 - [x] Create auth moddleware
 - [x] Setup cookie parser
 - [x] Validate token
 - [x] Add isAuthenticated guard
 - [x] Add isGuest guard
+
+### Edit and Delete Book
+- [ ] Add user-book relation
+
+### Dynamic Navigation

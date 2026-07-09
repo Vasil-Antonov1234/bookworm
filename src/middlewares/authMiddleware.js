@@ -14,8 +14,9 @@ export function authMiddleware(req, res, next) {
         res.user = decodedToken;
     } catch (error) {
         console.error("Invalid token!");
-
-        return res.status(401).send("Unauthorized!");
+        res.clearCookie("auth");
+        
+        return res.redirect("/auth/login");
     };
 
     next();
