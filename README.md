@@ -124,4 +124,5 @@ JS Backend workshop
 
 ### Authentication and Authorization
 - [x] Create auth moddleware
+- [x] Setup cookie parser
 - [ ] Validate token
