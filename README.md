@@ -121,3 +121,7 @@ JS Backend workshop
 - [x] Validate password
 - [x] Issue jwt token
 - [x] Retur token in cookie
+
+### Authentication and Authorization
+- [x] Create auth moddleware
+- [ ] Validate token
