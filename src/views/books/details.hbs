@@ -20,11 +20,13 @@
                 <p class="disc">Description: {{book.description}}</p>
                 <p class="card-category">Category: {{book.category}}</p>
             </div>
+            {{#if isOwner}}
             <div class="details-btn">
                 <a href="#" id="edit-button">Edit</a>
                 <a href="#" id="delete-button">Delete</a>
                 <a href="/books/{{book.id}}/attach" id="attach-button">Attach critic</a>
             </div>
+            {{/if}}
         </div>
         <div class="card_right">
             <img src={{book.imageUrl}} alt={{book.title}}>

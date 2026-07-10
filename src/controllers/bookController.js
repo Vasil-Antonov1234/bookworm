@@ -24,14 +24,16 @@ bookController.post("/create", isAuthenticated, async (req, res) => {
 
 bookController.get("/:bookId/details", async (req, res) => {
     const bookId = req.params.bookId;
+    const userId = res?.user.id;
 
-    
     try {
         const book = await bookService.getById(bookId);
+        
+        const isOwner = book.userId && book.userId === userId;        
 
         const stars = "1".repeat(Math.floor(book.rating)).split("");
 
-        res.render("books/details", { book, pageTitle: "Book Details", stars } );
+        res.render("books/details", { book, pageTitle: "Book Details", stars, isOwner } );
     } catch (error) {
         console.log(error.message);
     };
