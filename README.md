@@ -142,3 +142,4 @@ JS Backend workshop
 - [x] Implement post action
 
 ### Dynamic Navigation
+- [x] Show dynamic navigation based on user session

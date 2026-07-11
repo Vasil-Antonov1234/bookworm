@@ -4,11 +4,12 @@ import bookService from "../services/bookService.js";
 const homeController = Router();
 
 homeController.get("/", async (req, res) => {
-    
+    const user = req.user;
+
     try {
         const books = await bookService.getAll();
 
-        res.render("index", { books, pageTitle: "Home" });
+        res.render("index", { books, pageTitle: "Home", user });
     } catch (error) {
         console.log(error.message)
     };
