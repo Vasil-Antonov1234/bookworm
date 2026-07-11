@@ -143,3 +143,6 @@ JS Backend workshop
 
 ### Dynamic Navigation
 - [x] Show dynamic navigation based on user session
+
+### Bonus
+- [x] Automatic login when register

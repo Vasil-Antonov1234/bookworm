@@ -12,9 +12,10 @@ authController.post("/register", isGuest, async (req, res) => {
     const userData = req.body;
 
     try {
-        const newUser = await authService.register(userData);
+        const token = await authService.register(userData);
     
-        res.redirect("/auth/login");
+        res.cookie("auth", token, { httpOnly: true });
+        res.redirect("/");
     } catch (error) {
         res.send(error.message);
     };

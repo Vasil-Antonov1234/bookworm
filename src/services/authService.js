@@ -1,7 +1,6 @@
 import usersRepository from "../repositories/usersRepository.js"
 import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
-import { JWT_SECRET } from "../config/constants.js";
+import { generateAuthToken } from "../utils/tokenUtil.js";
 
 export default {
     async register(userData) {
@@ -12,8 +11,10 @@ export default {
                 ...userData, 
                 password: hashedPassword 
             });
+
+            const token = generateAuthToken(newUser);
     
-            return newUser;
+            return token;
         } catch (error) {
             throw error;
         }
@@ -34,8 +35,7 @@ export default {
                 throw new Error("Wrong user or password!");
             };
 
-            const payload = {id: user.id, email: user.email};
-            const token = jwt.sign(payload, JWT_SECRET, { expiresIn: "1h"});
+            const token = generateAuthToken(user);
 
             return token;
 
