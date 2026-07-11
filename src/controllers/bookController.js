@@ -29,12 +29,12 @@ bookController.get("/:bookId/details", async (req, res) => {
 
     try {
         const book = await bookService.getById(bookId);
-        
-        const isOwner = book.userId && book.userId === userId;    
+
+        const isOwner = book.userId && book.userId === userId;
 
         const stars = "1".repeat(Math.floor(book.rating)).split("");
 
-        res.render("books/details", { book, pageTitle: "Book Details", stars, isOwner } );
+        res.render("books/details", { book, pageTitle: "Book Details", stars, isOwner });
     } catch (error) {
         console.log(error.message);
     };
@@ -46,7 +46,7 @@ bookController.get("/search", async (req, res) => {
 
     try {
         const books = await bookService.getAll(searchData);
-        
+
         res.render("books/search", { books, searchData, pageTitle: "Search Book" });
     } catch (error) {
         console.log(error.message)
@@ -58,8 +58,8 @@ bookController.get("/:bookId/attach", isAuthenticated, async (req, res) => {
 
     try {
         const book = await bookService.getById(bookId);
-        const critics = await criticService.getAll({excludeIds: book.critics.map((x) => x.criticId) });
-        
+        const critics = await criticService.getAll({ excludeIds: book.critics.map((x) => x.criticId) });
+
         res.render("books/attach", { book, critics, pageTitle: "Attach Critic" });
     } catch (error) {
         throw error;
@@ -108,6 +108,20 @@ bookController.get("/:bookId/edit", isAuthenticated, async (req, res) => {
     } catch (error) {
         res.send(error.message)
     }
+});
+
+bookController.post("/:bookId/edit", isAuthenticated, async (req, res) => {
+    const bookId = Number(req.params.bookId);
+    const userId = req.user.id;
+    const editedBookData = req.body;
+
+    try {
+        await bookService.edit(bookId, userId, editedBookData);
+
+        res.redirect(`/books/${bookId}/details`);
+    } catch (error) {
+        res.send(error.message);
+    };
 })
 
 export default bookController;

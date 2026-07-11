@@ -56,5 +56,23 @@ export default {
         } catch (error) {
             throw error;
         };
+    },
+
+    async edit(bookId, userId, editedBookData) {
+        try {
+            const book = await bookRepository.getById(bookId)
+
+            if (book.userId !== userId) {
+                throw new Error("Unauthorized");
+            };
+
+            editedBookData.rating = Number(editedBookData.rating);
+            editedBookData.year = Number(editedBookData.year);
+
+            await bookRepository.edit(bookId, userId, editedBookData);
+
+        } catch (error) {
+            throw error;
+        };
     }
 }

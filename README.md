@@ -139,5 +139,6 @@ JS Backend workshop
 - [x] Iplement delete button
 - [x] Implement edit button
 - [x] Show dynamic edit page
+- [x] Implement post action
 
 ### Dynamic Navigation

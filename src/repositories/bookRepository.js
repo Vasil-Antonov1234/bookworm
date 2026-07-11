@@ -77,5 +77,19 @@ export default {
             throw error;
         };
 
+    },
+
+    async edit(bookId, userId, editedBookData) {
+        try {
+          await prisma.book.update({
+            where: {
+                id: bookId,
+                userId: userId
+            },
+            data: { ...editedBookData }
+          })  
+        } catch (error) {
+            throw error;
+        };
     }
 }
