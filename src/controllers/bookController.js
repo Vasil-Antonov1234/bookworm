@@ -11,7 +11,7 @@ bookController.get("/create", isAuthenticated, (req, res) => {
 
 bookController.post("/create", isAuthenticated, async (req, res) => {
     const newBook = req.body;
-    const ownerId = res.user.id;
+    const ownerId = req.user.id;
 
     try {
         await bookService.create(newBook, ownerId);
@@ -90,6 +90,23 @@ bookController.get("/:bookId/delete", isAuthenticated, async (req, res) => {
         res.redirect("/");
     } catch (error) {
         res.send(error.message);
+    }
+});
+
+bookController.get("/:bookId/edit", isAuthenticated, async (req, res) => {
+    const bookId = req.params.bookId;
+    const userId = req.user.id;
+
+    try {
+        const book = await bookService.getById(bookId);
+
+        if (book.userId !== userId) {
+            return res.status(401).send("Unauthorized");
+        };
+
+        res.render("books/edit", { pageTitle: "Edit Book", book })
+    } catch (error) {
+        res.send(error.message)
     }
 })
 

@@ -24,7 +24,7 @@ export function authMiddleware(req, res, next) {
 
 export function isAuthenticated(req, res, next) {
 
-    if (!res.user) {
+    if (!req.user) {
         return res.redirect("/auth/login")
     }
 
