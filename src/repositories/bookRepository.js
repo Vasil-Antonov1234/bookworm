@@ -61,6 +61,21 @@ export default {
             return result;
         } catch (error) {
             throw error;
-        }
+        };
+    },
+
+    async delete(bookId, userId) {
+
+        try {
+            await prisma.book.delete({
+                where: {
+                    id: bookId,
+                    userId: userId
+                }
+            });
+        } catch (error) {
+            throw error;
+        };
+
     }
 }

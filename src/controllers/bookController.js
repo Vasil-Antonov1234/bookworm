@@ -78,6 +78,19 @@ bookController.post("/:bookId/attach", isAuthenticated, async (req, res) => {
     } catch (error) {
         throw error;
     };
+});
+
+bookController.get("/:bookId/delete", isAuthenticated, async (req, res) => {
+    const bookId = req.params.bookId;
+    const userId = res.user.id;
+
+    try {
+        await bookService.delete(bookId, userId);
+
+        res.redirect("/");
+    } catch (error) {
+        res.send(error.message);
+    }
 })
 
 export default bookController;

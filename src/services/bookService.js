@@ -2,7 +2,7 @@ import bookRepository from "../repositories/bookRepository.js"
 
 export default {
     async getAll(searchData = {}) {
-        
+
         searchData.year = Number(searchData.year)
 
         try {
@@ -19,7 +19,7 @@ export default {
         newBook.userId = ownerId;
 
         try {
-          await bookRepository.create(newBook); 
+            await bookRepository.create(newBook);
         } catch (error) {
             throw error;
         };
@@ -27,7 +27,7 @@ export default {
 
     async getById(bookId) {
         try {
-          return await bookRepository.getById(Number(bookId));
+            return await bookRepository.getById(Number(bookId));
         } catch (error) {
             throw error;
         };
@@ -39,6 +39,20 @@ export default {
             const result = await bookRepository.attach(Number(bookId), Number(criticId), reviewContent);
 
             return result;
+        } catch (error) {
+            throw error;
+        };
+    },
+
+    async delete(bookId, userId) {
+        try {
+            const book = await bookRepository.getById(bookId);
+
+            if (book.userId != userId) {
+                throw new Error("Unauthorized");
+            };
+
+            await bookRepository.delete(Number(bookId), userId);
         } catch (error) {
             throw error;
         };
