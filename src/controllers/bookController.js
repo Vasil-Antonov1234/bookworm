@@ -24,7 +24,7 @@ bookController.post("/create", isAuthenticated, async (req, res) => {
 
 bookController.get("/:bookId/details", async (req, res) => {
     const bookId = req.params.bookId;
-    const userId = res.user?.id;
+    const userId = req.user?.id;
 
 
     try {
@@ -82,7 +82,7 @@ bookController.post("/:bookId/attach", isAuthenticated, async (req, res) => {
 
 bookController.get("/:bookId/delete", isAuthenticated, async (req, res) => {
     const bookId = req.params.bookId;
-    const userId = res.user.id;
+    const userId = req.user.id;
 
     try {
         await bookService.delete(bookId, userId);

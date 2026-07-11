@@ -136,6 +136,6 @@ JS Backend workshop
 - [x] Add user-book relation
 - [x] Add owner on book create
 - [x] Show dynamic details buttons
-- [ ] Iplement delete button
+- [x] Iplement delete button
 
 ### Dynamic Navigation
