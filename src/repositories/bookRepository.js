@@ -50,7 +50,7 @@ export default {
     async attach(bookId, criticId, reviewContent) {
         
         try {
-            const result = await prisma.bookCrtic.create({
+            const result = await prisma.bookCritic.create({
                 data: {
                     bookId: bookId,
                     criticId: criticId,

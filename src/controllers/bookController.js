@@ -24,12 +24,13 @@ bookController.post("/create", isAuthenticated, async (req, res) => {
 
 bookController.get("/:bookId/details", async (req, res) => {
     const bookId = req.params.bookId;
-    const userId = res?.user.id;
+    const userId = res.user?.id;
+
 
     try {
         const book = await bookService.getById(bookId);
         
-        const isOwner = book.userId && book.userId === userId;        
+        const isOwner = book.userId && book.userId === userId;    
 
         const stars = "1".repeat(Math.floor(book.rating)).split("");
 

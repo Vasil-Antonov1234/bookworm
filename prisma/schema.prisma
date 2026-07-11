@@ -28,7 +28,7 @@ model Book {
     userId  Int?
     owner User? @relation(fields: [userId], references: [id])
 
-    critics BooksCrtics[]
+    critics BookCritic[]
 
     @@map("books")
 }
@@ -42,12 +42,12 @@ model Critic {
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
 
-    books BooksCrtics[]
+    books BookCritic[]
 
     @@map("critics")
 }
 
-model BooksCrtics {
+model BookCritic {
     bookId Int
     criticId Int
     review String?
