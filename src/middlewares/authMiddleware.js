@@ -12,6 +12,7 @@ export function authMiddleware(req, res, next) {
         const decodedToken = jwt.verify(token, JWT_SECRET);
 
         req.user = decodedToken;
+        res.locals.user = decodedToken;
     } catch (error) {
         console.error("Invalid token!");
         res.clearCookie("auth");
