@@ -146,3 +146,5 @@ JS Backend workshop
 
 ### Bonus
 - [x] Automatic login when register
+- [x] Keep JWT_SECRET in .env
+- [x] Show dynamically category options on the edit book page

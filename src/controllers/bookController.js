@@ -2,6 +2,7 @@ import { Router } from "express";
 import bookService from "../services/bookService.js";
 import criticService from "../services/criticService.js";
 import { isAuthenticated } from "../middlewares/authMiddleware.js";
+import { prepareCategoryOptions } from "../utils/prepareCatecoryOptions.js";
 
 const bookController = Router();
 
@@ -99,12 +100,13 @@ bookController.get("/:bookId/edit", isAuthenticated, async (req, res) => {
 
     try {
         const book = await bookService.getById(bookId);
+        const categoryOptions = prepareCategoryOptions(book);
 
         if (book.userId !== userId) {
             return res.status(401).send("Unauthorized");
         };
 
-        res.render("books/edit", { pageTitle: "Edit Book", book })
+        res.render("books/edit", { pageTitle: "Edit Book", book, categoryOptions })
     } catch (error) {
         res.send(error.message)
     }
