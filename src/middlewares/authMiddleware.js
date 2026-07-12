@@ -1,15 +1,15 @@
 import jwt from "jsonwebtoken";
-import { JWT_SECRET } from "../config/constants.js";
 
 export function authMiddleware(req, res, next) {
     const token = req.cookies.auth;
+    const secret = process.env.JWT_SECRET;
 
     if (!token) {
         return next();
     };
 
     try {
-        const decodedToken = jwt.verify(token, JWT_SECRET);
+        const decodedToken = jwt.verify(token, secret);
 
         req.user = decodedToken;
         res.locals.user = decodedToken;
