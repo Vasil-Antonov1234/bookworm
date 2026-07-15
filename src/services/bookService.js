@@ -12,14 +12,12 @@ export default {
         };
     },
 
-    async create(newBook, ownerId) {
-        newBook.rating = Number(newBook.rating);
-        newBook.year = Number(newBook.year);
-
-        newBook.userId = ownerId;
+    async create(parsedData, ownerId) {
+        
+        parsedData.userId = ownerId;
 
         try {
-            await bookRepository.create(newBook);
+            await bookRepository.create(parsedData);
         } catch (error) {
             throw error;
         };

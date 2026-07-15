@@ -3,6 +3,8 @@ import bookService from "../services/bookService.js";
 import criticService from "../services/criticService.js";
 import { isAuthenticated } from "../middlewares/authMiddleware.js";
 import { prepareCategoryOptions } from "../utils/prepareCatecoryOptions.js";
+import * as z from "zod";
+import { createBookSchema } from "../schemas/bookSchema.js";
 
 const bookController = Router();
 
@@ -15,7 +17,10 @@ bookController.post("/create", isAuthenticated, async (req, res) => {
     const ownerId = req.user.id;
 
     try {
-        await bookService.create(newBook, ownerId);
+
+        const parsedData = createBookSchema.parse(newBook);
+
+        await bookService.create(parsedData, ownerId);
 
         res.redirect("/");
     } catch (error) {

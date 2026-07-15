@@ -17,10 +17,10 @@ export default {
         };
     },
 
-    async create(newBook) {
+    async create(parsedData) {
         try {
 
-            const book = await prisma.book.create({ data: newBook });
+            const book = await prisma.book.create({ data: parsedData });
 
             return book;
         } catch (error) {

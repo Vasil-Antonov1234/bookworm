@@ -153,7 +153,7 @@ JS Backend workshop
 
 ### Validation
 - [x] Add Book Validation Scherma
-- [ ] Validate Book
+- [x] Validate Book
 - [ ] Validate Critic
 - [ ] Validate Review
 - [ ] Validate User

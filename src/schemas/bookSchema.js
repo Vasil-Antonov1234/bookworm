@@ -1,6 +1,6 @@
 import * as z from "zod";
 
-createBookSchema = z.object({
+export const createBookSchema = z.object({
     title: z.string()
         .min(5, { message: "Title must be at least 5 characters long" })
         .regex(/^[A-Za-z0-9 ]+$/, { message: "Title can only contains letters, numbers and spaces" }),
