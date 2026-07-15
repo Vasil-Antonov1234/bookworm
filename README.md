@@ -148,3 +148,13 @@ JS Backend workshop
 - [x] Automatic login when register
 - [x] Keep JWT_SECRET in .env
 - [x] Show dynamically category options on the edit book page
+
+## Part 4 - Validation and Error Handling
+
+### Validation
+- [x] Add Book Validation Scherma
+- [ ] Validate Book
+- [ ] Validate Critic
+- [ ] Validate Review
+- [ ] Validate User
+- [ ] Validate repeat password
