@@ -4,7 +4,7 @@ export function prepareCategoryOptions(book) {
     const selectOptions = options.map((x) => ({
         value:  categoryValueHandler(x),
         title: x,
-        selected: book.category === categoryValueHandler(x) ? "selected" : ""
+        selected: book ? book.category === categoryValueHandler(x) ? "selected" : "" : ""
     }));
     return selectOptions;
 };

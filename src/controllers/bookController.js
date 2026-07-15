@@ -9,7 +9,8 @@ import { createBookSchema } from "../schemas/bookSchema.js";
 const bookController = Router();
 
 bookController.get("/create", isAuthenticated, (req, res) => {
-    res.render("books/create", { pageTitle: "Create Book" });
+    const categoryOptions = prepareCategoryOptions();
+    res.render("books/create", { pageTitle: "Create Book", categoryOptions });
 });
 
 bookController.post("/create", isAuthenticated, async (req, res) => {
@@ -26,7 +27,8 @@ bookController.post("/create", isAuthenticated, async (req, res) => {
     } catch (error) {
         if (error instanceof z.ZodError) {
             const errors = z.flattenError(error).fieldErrors;
-            res.status(400).render("books/create", { newBook, errors, pageTitle: "Create Book" })
+            const categoryOptions = prepareCategoryOptions(newBook);
+            res.status(400).render("books/create", { newBook, errors, pageTitle: "Create Book", categoryOptions })
         };
     };
 });

@@ -151,11 +151,18 @@ JS Backend workshop
 
 ## Part 4 - Validation and Error Handling
 
-### Validation
+### Book validation and error handling
 - [x] Add Book Validation Scherma with Zod
 - [x] Validate Book
 - [x] Catch, extract and return errors
 - [x] Populate already field data
+- [x] Populate select category options
+- [ ] Show single error
+- [ ] Show multiple errors
+
+
+
+
 - [ ] Validate Critic
 - [ ] Validate Review
 - [ ] Validate User

@@ -13,15 +13,7 @@
                     <input type="text" class="inputFields" id="title" name="title" value="{{newBook.title}}" />
                 </li>
                 <li>
-                    <label for="category">Category:</label>
-                    <select id="category" class="inputFields" name="category">
-                        <option value="">Select Category</option>
-                        <option value="novel">Novel</option>
-                        <option value="poetry">Poetry</option>
-                        <option value="biography">Biography</option>
-                        <option value="non-fiction">Non-Fiction</option>
-                        <option value="short-story">Short Story</option>
-                    </select>
+                    {{>categorySelectOptions}}
                 </li>
                 <li>
                     <label for="genre">Genre:</label>
