@@ -10,7 +10,7 @@
             <ul class="noBullet">
                 <li>
                     <label for="title">Title:</label>
-                    <input type="text" class="inputFields" id="title" name="title" />
+                    <input type="text" class="inputFields" id="title" name="title" value="{{newBook.title}}" />
                 </li>
                 <li>
                     <label for="category">Category:</label>
@@ -25,27 +25,27 @@
                 </li>
                 <li>
                     <label for="genre">Genre:</label>
-                    <input type="text" class="inputFields" id="genre" name="genre" />
+                    <input type="text" class="inputFields" id="genre" name="genre" value="{{newBook.genre}}" />
                 </li>
                 <li>
                     <label for="author">Author:</label>
-                    <input type="text" class="inputFields" id="author" name="author" />
+                    <input type="text" class="inputFields" id="author" name="author" value="{{newBook.author}}" />
                 </li>
                 <li>
                     <label for="date">Year:</label>
-                    <input type="number" class="inputFields" id="year" name="year" />
+                    <input type="number" class="inputFields" id="year" name="year" value="{{newBook.year}}" />
                 </li>
                 <li>
                     <label for="image">Book Cover:</label>
-                    <input type="text" class="inputFields" id="image" name="imageUrl" />
+                    <input type="text" class="inputFields" id="image" name="imageUrl" value="{{newBook.imageUrl}}" />
                 </li>
                 <li>
                     <label for="rating">Rating:</label>
-                    <input type="text" class="inputFields" id="rating" name="rating" />
+                    <input type="text" class="inputFields" id="rating" name="rating" value="{{newBook.rating}}" />
                 </li>
                 <li>
                     <label for="description">Description:</label>
-                    <textarea id="description" class="inputFields" name="description"></textarea>
+                    <textarea id="description" class="inputFields" name="description">{{newBook.description}}</textarea>
                 </li>
 
                 <li id="center-btn">

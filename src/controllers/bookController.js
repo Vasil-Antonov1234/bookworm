@@ -24,7 +24,10 @@ bookController.post("/create", isAuthenticated, async (req, res) => {
 
         res.redirect("/");
     } catch (error) {
-        console.log(error.message);
+        if (error instanceof z.ZodError) {
+            const errors = z.flattenError(error).fieldErrors;
+            res.status(400).render("books/create", { newBook, errors, pageTitle: "Create Book" })
+        };
     };
 });
 
