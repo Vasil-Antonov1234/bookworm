@@ -158,7 +158,7 @@ JS Backend workshop
 - [x] Populate already field data
 - [x] Populate select category options
 - [x] Show single error
-- [ ] Show multiple errors
+- [x] Show multiple errors
 
 
 

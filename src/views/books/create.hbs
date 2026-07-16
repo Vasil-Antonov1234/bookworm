@@ -11,33 +11,41 @@
                 <li>
                     <label for="title">Title:</label>
                     <input type="text" class="inputFields" id="title" name="title" value="{{newBook.title}}" />
+                    {{>error errors.title}}
                 </li>
                 <li>
                     {{>categorySelectOptions}}
+                    {{>error errors.category}}
                 </li>
                 <li>
                     <label for="genre">Genre:</label>
                     <input type="text" class="inputFields" id="genre" name="genre" value="{{newBook.genre}}" />
+                    {{>error errors.genre}}
                 </li>
                 <li>
                     <label for="author">Author:</label>
                     <input type="text" class="inputFields" id="author" name="author" value="{{newBook.author}}" />
+                    {{>error errors.author}}
                 </li>
                 <li>
                     <label for="date">Year:</label>
                     <input type="number" class="inputFields" id="year" name="year" value="{{newBook.year}}" />
+                    {{>error errors.year}}
                 </li>
                 <li>
                     <label for="image">Book Cover:</label>
                     <input type="text" class="inputFields" id="image" name="imageUrl" value="{{newBook.imageUrl}}" />
+                    {{>error errors.imageUrl}}
                 </li>
                 <li>
                     <label for="rating">Rating:</label>
                     <input type="text" class="inputFields" id="rating" name="rating" value="{{newBook.rating}}" />
+                    {{>error errors.rating}}
                 </li>
                 <li>
                     <label for="description">Description:</label>
                     <textarea id="description" class="inputFields" name="description">{{newBook.description}}</textarea>
+                    {{>error errors.description}}
                 </li>
 
                 <li id="center-btn">

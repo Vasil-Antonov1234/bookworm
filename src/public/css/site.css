@@ -167,3 +167,7 @@ footer {
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
+
+.error {
+    color: #C4291C;
+}
