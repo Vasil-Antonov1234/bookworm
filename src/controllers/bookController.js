@@ -28,7 +28,7 @@ bookController.post("/create", isAuthenticated, async (req, res) => {
         if (error instanceof z.ZodError) {
             const errors = z.flattenError(error).fieldErrors;
             const categoryOptions = prepareCategoryOptions(newBook);
-            res.status(400).render("books/create", { newBook, errors, pageTitle: "Create Book", categoryOptions })
+            res.status(400).render("books/create", { newBook, errors: Object.values(errors).flat()[0], pageTitle: "Create Book", categoryOptions })
         };
     };
 });

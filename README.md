@@ -157,7 +157,7 @@ JS Backend workshop
 - [x] Catch, extract and return errors
 - [x] Populate already field data
 - [x] Populate select category options
-- [ ] Show single error
+- [x] Show single error
 - [ ] Show multiple errors
 
 
