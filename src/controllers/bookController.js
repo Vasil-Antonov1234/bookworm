@@ -25,12 +25,19 @@ bookController.post("/create", isAuthenticated, async (req, res) => {
 
         res.redirect("/");
     } catch (error) {
+        let errors = null;
+        let singleError = null;
+
         if (error instanceof z.ZodError) {
-            const errors = z.flattenError(error).fieldErrors;
-            const categoryOptions = prepareCategoryOptions(newBook);
-            const singleError = Object.values(errors).flat()[0];
-            res.status(400).render("books/create", { newBook, errors, error: null, pageTitle: "Create Book", categoryOptions })
+            errors = z.flattenError(error).fieldErrors;
+            // singleError = singleError = Object.values(errors).flat()[0];
+        } else {
+            singleError = "Something went wrong!";
         };
+
+        const categoryOptions = prepareCategoryOptions(newBook);
+        res.status(400).render("books/create", { newBook, errors, error: singleError, pageTitle: "Create Book", categoryOptions })
+
     };
 });
 

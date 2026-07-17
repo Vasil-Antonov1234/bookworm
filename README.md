@@ -159,7 +159,7 @@ JS Backend workshop
 - [x] Populate select category options
 - [x] Show single error
 - [x] Show multiple errors
-
+- [x] Get And Show Prisma Errors
 
 
 
