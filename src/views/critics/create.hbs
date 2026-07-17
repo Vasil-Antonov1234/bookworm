@@ -10,19 +10,23 @@
             <ul class="noBullet">
                 <li>
                     <label for="fullName">Name:</label>
-                    <input type="text" class="inputFields" id="fullName" name="fullName" />
+                    <input type="text" class="inputFields" id="fullName" name="fullName" value="{{userData.fullName}}" />
+                    {{>error errors.fullName}}
                 </li>
                 <li>
                     <label for="age">Age:</label>
-                    <input type="text" class="inputFields" id="age" name="age" />
+                    <input type="text" class="inputFields" id="age" name="age" value="{{userData.age}}" />
+                    {{>error errors.age}}
                 </li>
                 <li>
                     <label for="placeOfBorn">Place of Born:</label>
-                    <input type="text" class="inputFields" id="placeOfBorn" name="placeOfBorn" />
+                    <input type="text" class="inputFields" id="placeOfBorn" name="placeOfBorn" value="{{userData.placeOfBorn}}" />
+                    {{>error errors.placeOfBorn}}
                 </li>
                 <li>
                     <label for="image">Image:</label>
-                    <input type="text" class="inputFields" id="image" name="image" />
+                    <input type="text" class="inputFields" id="image" name="image" value="{{userData.image}}" />
+                    {{>error errors.image}}
                 </li>
                 <li id="center-btn">
                     <button id="create-btn">Add Critic</button>

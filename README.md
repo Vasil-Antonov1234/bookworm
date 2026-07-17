@@ -161,9 +161,13 @@ JS Backend workshop
 - [x] Show multiple errors
 - [x] Get And Show Prisma Errors
 
+### Critic validation and error handling
+- [x] Add Critic Validation Schema
+- [x] Validate Critic
 
 
-- [ ] Validate Critic
+
+
 - [ ] Validate Review
 - [ ] Validate User
 - [ ] Validate repeat password
