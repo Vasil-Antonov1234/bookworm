@@ -166,6 +166,7 @@ JS Backend workshop
 - [x] Validate Critic
 
 ### User validation and error handling
+- [x] Create Schema
 - [x] Validate User
 - [x] Add getErrorMessage Util
 - [x] Add  RepositoryError Class

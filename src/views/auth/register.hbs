@@ -14,10 +14,12 @@
                 <li>
                     <label for="password">Password:</label>
                     <input type="password" class="inputFields" id="password" name="password" />
+                    {{>error errors.password}}
                 </li>
                 <li>
                     <label for="repeat-password">Repeat-Password:</label>
                     <input type="password" class="inputFields" id="repeat-password" name="repeatPassword" />
+                    {{>error errors.repeatPassword}}
                 </li>
                 <li id="center-btn">
                     <button id="join-btn">Register</button>
