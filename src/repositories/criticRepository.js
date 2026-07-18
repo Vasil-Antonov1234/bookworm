@@ -1,4 +1,5 @@
 import { prisma } from "../lib/prisma";
+import { RepositoryError } from "../utils/errorUtil.js";
 
 export default {
     async create(newCritic) {
@@ -8,6 +9,11 @@ export default {
 
             return critic;
         } catch (error) {
+            
+            if (error.code === "P2002") {
+                throw new RepositoryError("image", "This critic already exists in the database!")
+            }
+            
             throw error;
         };
     },

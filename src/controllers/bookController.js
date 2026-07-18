@@ -3,8 +3,8 @@ import bookService from "../services/bookService.js";
 import criticService from "../services/criticService.js";
 import { isAuthenticated } from "../middlewares/authMiddleware.js";
 import { prepareCategoryOptions } from "../utils/prepareCatecoryOptions.js";
-import * as z from "zod";
 import { createBookSchema } from "../schemas/bookSchema.js";
+import { getErrorMessage } from "../utils/errorUtil.js";
 
 const bookController = Router();
 
@@ -25,15 +25,8 @@ bookController.post("/create", isAuthenticated, async (req, res) => {
 
         res.redirect("/");
     } catch (error) {
-        let errors = null;
-        let singleError = null;
 
-        if (error instanceof z.ZodError) {
-            errors = z.flattenError(error).fieldErrors;
-            // singleError = singleError = Object.values(errors).flat()[0];
-        } else {
-            singleError = "Something went wrong!";
-        };
+        const {errors, singleError } = getErrorMessage(error)
 
         const categoryOptions = prepareCategoryOptions(newBook);
         res.status(400).render("books/create", { newBook, errors, error: singleError, pageTitle: "Create Book", categoryOptions })

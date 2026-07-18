@@ -38,7 +38,7 @@ model Critic {
     fullName  String
     age Int
     placeOfBorn String
-    image  String
+    image  String @unique
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
 

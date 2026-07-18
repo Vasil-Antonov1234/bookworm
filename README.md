@@ -165,9 +165,11 @@ JS Backend workshop
 - [x] Add Critic Validation Schema
 - [x] Validate Critic
 
-
+### User validation and error handling
+- [x] Validate User
+- [x] Add getErrorMessage Util
+- [x] Add  RepositoryError Class
 
 
 - [ ] Validate Review
-- [ ] Validate User
 - [ ] Validate repeat password
