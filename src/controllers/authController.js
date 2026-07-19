@@ -6,7 +6,7 @@ import { createUserSchema } from "../schemas/userSchema.js";
 const authController = Router();
 
 authController.get("/register", isGuest, (req, res) => {
-    res.render("auth/register", { pageTitle: "Register Page" });
+    res.render("auth/register");
 });
 
 authController.post("/register", isGuest, async (req, res) => {
@@ -23,13 +23,13 @@ authController.post("/register", isGuest, async (req, res) => {
         
         const { errors, singleError } = getErrorMessage(error);
 
-        res.status(400).render("auth/register", { errors, error: singleError, pageTitle: "Register Page", userData })
+        res.status(400).render("auth/register", { errors, error: singleError, userData })
     };
 
 });
 
 authController.get("/login", isGuest, (req, res) => {
-    res.render("auth/login", { pageTitle: "Login Page" });
+    res.render("auth/login");
 });
 
 authController.post("/login", isGuest, async (req, res) => {

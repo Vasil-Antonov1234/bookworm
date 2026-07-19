@@ -8,7 +8,12 @@ import cookieParser from "cookie-parser";
 const app = express();
 
 app.engine("hbs", engine({
-    extname: "hbs"
+    extname: "hbs",
+    helpers: {
+        setTitle(title) {
+            this.pageTitle = title;
+        }
+    }
 }));
 app.set("view engine", "hbs");
 app.set("views", "./src/views");

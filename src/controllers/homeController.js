@@ -8,7 +8,7 @@ homeController.get("/", async (req, res) => {
     try {
         const books = await bookService.getAll();
 
-        res.render("index", { books, pageTitle: "Home" });
+        res.render("index", { books });
     } catch (error) {
         console.log(error.message)
     };
@@ -16,7 +16,7 @@ homeController.get("/", async (req, res) => {
 
 homeController.get("/about", (req, res) => {
 
-    res.render("about", { pageTitle: "About us" });
+    res.render("about");
 });
 
 export default homeController;

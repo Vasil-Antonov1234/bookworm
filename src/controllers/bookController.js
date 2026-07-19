@@ -10,7 +10,7 @@ const bookController = Router();
 
 bookController.get("/create", isAuthenticated, (req, res) => {
     const categoryOptions = prepareCategoryOptions();
-    res.render("books/create", { pageTitle: "Create Book", categoryOptions });
+    res.render("books/create", { categoryOptions });
 });
 
 bookController.post("/create", isAuthenticated, async (req, res) => {
@@ -29,7 +29,7 @@ bookController.post("/create", isAuthenticated, async (req, res) => {
         const {errors, singleError } = getErrorMessage(error)
 
         const categoryOptions = prepareCategoryOptions(newBook);
-        res.status(400).render("books/create", { newBook, errors, error: singleError, pageTitle: "Create Book", categoryOptions })
+        res.status(400).render("books/create", { newBook, errors, error: singleError, categoryOptions })
 
     };
 });
@@ -46,7 +46,7 @@ bookController.get("/:bookId/details", async (req, res) => {
 
         const stars = "1".repeat(Math.floor(book.rating)).split("");
 
-        res.render("books/details", { book, pageTitle: "Book Details", stars, isOwner });
+        res.render("books/details", { book, stars, isOwner });
     } catch (error) {
         console.log(error.message);
     };
@@ -59,7 +59,7 @@ bookController.get("/search", async (req, res) => {
     try {
         const books = await bookService.getAll(searchData);
 
-        res.render("books/search", { books, searchData, pageTitle: "Search Book" });
+        res.render("books/search", { books, searchData });
     } catch (error) {
         console.log(error.message)
     }
@@ -72,7 +72,7 @@ bookController.get("/:bookId/attach", isAuthenticated, async (req, res) => {
         const book = await bookService.getById(bookId);
         const critics = await criticService.getAll({ excludeIds: book.critics.map((x) => x.criticId) });
 
-        res.render("books/attach", { book, critics, pageTitle: "Attach Critic" });
+        res.render("books/attach", { book, critics });
     } catch (error) {
         throw error;
     };
@@ -117,7 +117,7 @@ bookController.get("/:bookId/edit", isAuthenticated, async (req, res) => {
             return res.status(401).send("Unauthorized");
         };
 
-        res.render("books/edit", { pageTitle: "Edit Book", book, categoryOptions })
+        res.render("books/edit", { book, categoryOptions })
     } catch (error) {
         res.send(error.message)
     }

@@ -7,7 +7,7 @@ import { getErrorMessage } from "../utils/errorUtil.js";
 const criticController = Router();
 
 criticController.get("/create", isAuthenticated, (req, res) => {
-    res.render("critics/create", { pageTitle: "Create Critic" });
+    res.render("critics/create");
 });
 
 criticController.post("/create", isAuthenticated, async (req, res) => {
@@ -24,7 +24,7 @@ criticController.post("/create", isAuthenticated, async (req, res) => {
 
         const { errors, singleError } = getErrorMessage(error);
 
-        res.status(400).render("critics/create", { errors, error: singleError, newCritic, pageTitle: "Create Critic"})
+        res.status(400).render("critics/create", { errors, error: singleError, newCritic})
     }
 
 })
