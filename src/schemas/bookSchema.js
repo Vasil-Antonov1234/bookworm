@@ -2,24 +2,24 @@ import * as z from "zod";
 
 export const createBookSchema = z.object({
     title: z.string()
-        .min(5, { message: "Title must be at least 5 characters long" })
-        .regex(/^[A-Za-z0-9 ]+$/, { message: "Title can only contains letters, numbers and spaces" }),
-    category: z.enum(["novel", "poetry", "biography", "non-fiction", "short-story"], { message: "Please select a category from the list" }),
+        .min(5, { error: "Title must be at least 5 characters long" })
+        .regex(/^[A-Za-z0-9 ]+$/, { error: "Title can only contains letters, numbers and spaces" }),
+    category: z.enum(["novel", "poetry", "biography", "non-fiction", "short-story"], { error: "Please select a category from the list" }),
     genre: z.string()
-        .min(5, { message: "Genre must be at least 5 characters long" })
-        .regex(/^[A-Za-z0-9 ]+$/, { message: "Genre can only contains letters, numbers and spaces" }),
+        .min(5, { error: "Genre must be at least 5 characters long" })
+        .regex(/^[A-Za-z0-9 ]+$/, { error: "Genre can only contains letters, numbers and spaces" }),
     author: z.string()
-        .min(5, { message: "Author name must be at least 5 characters long" })
-        .regex(/^[A-Za-z0-9 ]+$/, { message: "Author name can only contains letters, numbers and spaces" }),
+        .min(5, { error: "Author name must be at least 5 characters long" })
+        .regex(/^[A-Za-z0-9 ]+$/, { error: "Author name can only contains letters, numbers and spaces" }),
     year: z.coerce.number()
-        .min(1900, { message: "Year must be greater than or equal to 1900" })
-        .max(new Date().getFullYear(), { message: `Year must be less than or equal to ${new Date().getFullYear()}` }),
+        .min(1900, { error: "Year must be greater than or equal to 1900" })
+        .max(new Date().getFullYear(), { error: `Year must be less than or equal to ${new Date().getFullYear()}` }),
     imageUrl: z.string()
-        .regex(/^https?:\/\//, { message: "Image URL must starts with http:// or https://" }),
+        .regex(/^https?:\/\//, { error: "Image URL must starts with http:// or https://" }),
     rating: z.coerce.number()
-        .min(0, { message: "Rating must be at least 0" })
-        .max(10, { message: "Rating must be at most 10" }),
+        .min(0, { error: "Rating must be at least 0" })
+        .max(10, { error: "Rating must be at most 10" }),
     description: z.string()
-        .min(20, { message: "Description must be at least 20 characters long." })
-        .regex(/^[A-Za-z0-9 ]+$/, { message: "Description can only contains letters, numbers and spaces" }),
+        .min(20, { error: "Description must be at least 20 characters long." })
+        .regex(/^[A-Za-z0-9 ]+$/, { error: "Description can only contains letters, numbers and spaces" }),
 })

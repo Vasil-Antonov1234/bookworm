@@ -174,4 +174,3 @@ JS Backend workshop
 
 
 - [ ] Validate Review
-- [ ] Validate repeat password
