@@ -17,7 +17,6 @@ authController.post("/register", isGuest, async (req, res) => {
         
         const token = await authService.register(parsedData);
 
-
         res.cookie("auth", token, { httpOnly: true });
         res.redirect("/");
     } catch (error) {

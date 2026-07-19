@@ -3,13 +3,13 @@ import bcrypt from "bcrypt";
 import { generateAuthToken } from "../utils/tokenUtil.js";
 
 export default {
-    async register(userData) {
+    async register(parsedData) {
         
         try {
-            const hashedPassword = await bcrypt.hash(userData.password, 10);
+            const hashedPassword = await bcrypt.hash(parsedData.password, 10);
             const newUser = await usersRepository.create({ 
-                ...userData, 
-                password: hashedPassword 
+                ...parsedData, 
+                password: hashedPassword
             });
 
             const token = generateAuthToken(newUser);

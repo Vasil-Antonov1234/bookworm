@@ -8,4 +8,7 @@ export const createUserSchema = z.object({
         .min(6, { message: "Password must be at least 6 characters long"})
         .regex(/^[A-Za-z0-9]+$/, { message: "Password must contains at least none letter and one number"}),
     repeatPassword: z.string()
-})
+}).refine((data) => data.password === data.repeatPassword, { 
+    message: "Passwords do not match!", 
+    path: ["repeatPassword"]
+}).transform(({ repeatPassword, ...data }) => data);

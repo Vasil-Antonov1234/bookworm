@@ -2,14 +2,11 @@ import { prisma } from "../lib/prisma.js";
 import { RepositoryError } from "../utils/errorUtil.js";
 
 export default {
-    async create(userData) {
+    async create(parsedData) {
 
         try {
             const newUser = await prisma.user.create({
-                data: {
-                    email: userData.email,
-                    password: userData.password
-                }
+                data: { ...parsedData }
             });
 
             return newUser;

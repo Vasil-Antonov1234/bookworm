@@ -170,6 +170,7 @@ JS Backend workshop
 - [x] Validate User
 - [x] Add getErrorMessage Util
 - [x] Add  RepositoryError Class
+- [x] Validate Repeast Password
 
 
 - [ ] Validate Review
