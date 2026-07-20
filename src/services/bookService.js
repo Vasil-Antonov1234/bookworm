@@ -33,13 +33,9 @@ export default {
 
     async attach(parsedData) {
 
-        try {
-            const result = await bookRepository.attach(parsedData);
-
-            return result;
-        } catch (error) {
-            throw error;
-        };
+        const result = await bookRepository.attach(parsedData);
+        return result;
+        
     },
 
     async delete(bookId, userId) {

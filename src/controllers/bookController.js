@@ -80,8 +80,10 @@ bookController.get("/:bookId/attach", isAuthenticated, async (req, res) => {
 });
 
 bookController.post("/:bookId/attach", isAuthenticated, async (req, res) => {
-    const bookId = req.params.bookId;
-    const criticId = req.body.critic;
+    // const bookId = req.params.bookId;
+    // const criticId = req.body.critic;
+    const bookId = "8";
+    const criticId = "4";
     const reviewContent = req.body.review;
     const newData = { criticId, reviewContent, bookId }
     
@@ -90,8 +92,8 @@ bookController.post("/:bookId/attach", isAuthenticated, async (req, res) => {
 
     try {
 
-        book = await bookService.getById(bookId);
-        critics = await criticService.getAll({ excludeIds: book.critics.map((x) => x.criticId) });
+        // book = await bookService.getById(bookId);
+        // critics = await criticService.getAll({ excludeIds: book.critics.map((x) => x.criticId) });
         
         const parsedData = createReviewSchema.parse({ criticId, reviewContent, bookId })
         
@@ -102,7 +104,7 @@ bookController.post("/:bookId/attach", isAuthenticated, async (req, res) => {
         
         const {errors, singleError } = getErrorMessage(error);
 
-        res.status(400).render("books/attach", { errors, singleError, book, critics, newData });
+        res.status(400).render("books/attach", { errors, error: singleError, book, critics, newData });
     };
 });
 

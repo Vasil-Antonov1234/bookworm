@@ -1,7 +1,7 @@
 import * as z from "zod";
 
 export const createReviewSchema = z.object({
-    criticId: z.coerce.number()
+    criticId: z.coerce.number({ error: "Please select a critic to attach" })
         .min(1, { error: "Invalid critic"}),
     reviewContent: z.string()
         .min(10, { error: "Review must be at least 10 characters long" })

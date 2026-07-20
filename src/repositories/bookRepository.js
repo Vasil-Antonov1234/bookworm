@@ -1,4 +1,5 @@
 import { prisma } from "../lib/prisma.js"
+import { RepositoryError } from "../utils/errorUtil.js";
 
 export default {
     async getAll(searchData = {}) {
@@ -60,7 +61,10 @@ export default {
 
             return result;
         } catch (error) {
-            throw error;
+            
+            if (error.code === "P2003") {
+                throw new RepositoryError("criticId", "Invalid data!", true);
+            }
         };
     },
 
