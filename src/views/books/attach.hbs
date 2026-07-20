@@ -16,6 +16,7 @@
                     {{/each}}
 
                 </select>
+                {{>error errors.criticId}}
                 <div>
                     <label for="review">Review:</label>
                     <textarea id="review" class="inputFields review-content" name="review">{{newData.reviewContent}}</textarea>

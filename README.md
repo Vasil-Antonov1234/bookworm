@@ -175,8 +175,14 @@ JS Backend workshop
 ### Review validation and error handling
 - [x] Create Schema
 - [x] Validate Review
-- [ ] Catch, extract and return errors
-- [ ] Populate already field data
+- [x] Catch, extract and return errors
+- [x] Populate already field data
 
 ### Bonus
 - [x] Fix dynamic page titles
+
+
+
+
+- [ ] Catch Prisma Error on Attach Review
+- [ ] Fix bookController catch error
