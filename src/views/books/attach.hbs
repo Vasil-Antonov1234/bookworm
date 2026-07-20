@@ -9,7 +9,7 @@
             <form method="post">
                 <label for="critic">Critic</label>
                 <select id="critic" name="critic">
-                    <option value="none" selected>--------</option>
+                    <option value="none" selected>----Select Critic----</option>
 
                     {{#each critics}}
                     <option value={{id}}>{{fullName}}</option>
@@ -18,7 +18,8 @@
                 </select>
                 <div>
                     <label for="review">Review:</label>
-                    <textarea id="review" class="inputFields review-content" name="review"></textarea>
+                    <textarea id="review" class="inputFields review-content" name="review">{{newData.reviewContent}}</textarea>
+                    {{>error errors.reviewContent}}
                 </div>
                 <div id="center-btn">
                     <button id="create-btn">Add Review</button>

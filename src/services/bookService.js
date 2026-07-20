@@ -31,10 +31,10 @@ export default {
         };
     },
 
-    async attach(bookId, criticId, reviewContent) {
+    async attach(parsedData) {
 
         try {
-            const result = await bookRepository.attach(Number(bookId), Number(criticId), reviewContent);
+            const result = await bookRepository.attach(parsedData);
 
             return result;
         } catch (error) {

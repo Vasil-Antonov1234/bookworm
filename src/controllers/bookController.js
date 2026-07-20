@@ -5,6 +5,7 @@ import { isAuthenticated } from "../middlewares/authMiddleware.js";
 import { prepareCategoryOptions } from "../utils/prepareCatecoryOptions.js";
 import { createBookSchema } from "../schemas/bookSchema.js";
 import { getErrorMessage } from "../utils/errorUtil.js";
+import { createReviewSchema } from "../schemas/reviewSchema.js";
 
 const bookController = Router();
 
@@ -82,13 +83,23 @@ bookController.post("/:bookId/attach", isAuthenticated, async (req, res) => {
     const bookId = req.params.bookId;
     const criticId = req.body.critic;
     const reviewContent = req.body.review;
+    const newData = { criticId, reviewContent, bookId }
 
     try {
-        await bookService.attach(bookId, criticId, reviewContent);
 
+        
+        const parsedData = createReviewSchema.parse({ criticId, reviewContent, bookId })
+        
+        await bookService.attach(parsedData);
+        
         res.redirect(`/books/${bookId}/details`)
     } catch (error) {
-        throw error;
+        
+        const book = await bookService.getById(bookId);
+        const critics = await criticService.getAll({ excludeIds: book.critics.map((x) => x.criticId) });
+        const {errors, singleError } = getErrorMessage(error);
+
+        res.status(400).render("books/attach", { errors, singleError, book, critics, newData })
     };
 });
 

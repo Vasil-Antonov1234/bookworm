@@ -173,10 +173,10 @@ JS Backend workshop
 - [x] Validate Repeast Password
 
 ### Review validation and error handling
-- [ ] Create Schema
-- [ ] Validate Review
+- [x] Create Schema
+- [x] Validate Review
 - [ ] Catch, extract and return errors
 - [ ] Populate already field data
 
 ### Bonus
-- [ ] Fix dynamic page titles
+- [x] Fix dynamic page titles
