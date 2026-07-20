@@ -49,8 +49,6 @@ export default {
 
     async attach(parsedData) {
         
-        console.log(parsedData)
-
         try {
             const result = await prisma.bookCritic.create({
                 data: {

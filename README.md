@@ -185,4 +185,3 @@ JS Backend workshop
 
 
 - [ ] Catch Prisma Error on Attach Review
-- [ ] Fix bookController catch error

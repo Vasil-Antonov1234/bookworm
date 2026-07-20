@@ -84,9 +84,14 @@ bookController.post("/:bookId/attach", isAuthenticated, async (req, res) => {
     const criticId = req.body.critic;
     const reviewContent = req.body.review;
     const newData = { criticId, reviewContent, bookId }
+    
+    let book = {};
+    let critics = [];
 
     try {
 
+        book = await bookService.getById(bookId);
+        critics = await criticService.getAll({ excludeIds: book.critics.map((x) => x.criticId) });
         
         const parsedData = createReviewSchema.parse({ criticId, reviewContent, bookId })
         
@@ -95,11 +100,9 @@ bookController.post("/:bookId/attach", isAuthenticated, async (req, res) => {
         res.redirect(`/books/${bookId}/details`)
     } catch (error) {
         
-        const book = await bookService.getById(bookId);
-        const critics = await criticService.getAll({ excludeIds: book.critics.map((x) => x.criticId) });
         const {errors, singleError } = getErrorMessage(error);
 
-        res.status(400).render("books/attach", { errors, singleError, book, critics, newData })
+        res.status(400).render("books/attach", { errors, singleError, book, critics, newData });
     };
 });
 
