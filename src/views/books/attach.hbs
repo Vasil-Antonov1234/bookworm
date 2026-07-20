@@ -6,6 +6,7 @@
         <div class="attach-form">
             <h2>{{book.title}}</h2>
             <img class="book" src={{book.imageUrl}} alt={{book.title}}>
+            {{>error errors.bookId}}
             <form method="post">
                 <label for="critic">Critic</label>
                 <select id="critic" name="critic">

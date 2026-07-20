@@ -7,6 +7,7 @@ export function getErrorMessage(error, isSingleError) {
 
     if (error instanceof z.ZodError) {
         errors = z.flattenError(error).fieldErrors;
+        console.log(errors)
         singleError = isSingleError ? Object.values(errors).flat()[0] : "";
     } else if (error instanceof Prisma.PrismaClientKnownRequestError) {
         switch (error.code) {

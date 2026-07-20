@@ -7,4 +7,5 @@ export const createReviewSchema = z.object({
         .min(10, { error: "Review must be at least 10 characters long" })
         .regex(/^[A-Za-z0-9 \.!?]+$/, { error: "Review cannot contains special characters" }),
     bookId: z.coerce.number()
+        .min(1, { error: "Invalid Book"})
 })
