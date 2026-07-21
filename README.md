@@ -180,8 +180,3 @@ JS Backend workshop
 
 ### Bonus
 - [x] Fix dynamic page titles
-
-
-
-
-- [ ] Catch Prisma Error on Attach Review
