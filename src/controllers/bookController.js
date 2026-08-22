@@ -80,20 +80,14 @@ bookController.get("/:bookId/attach", isAuthenticated, async (req, res) => {
 });
 
 bookController.post("/:bookId/attach", isAuthenticated, async (req, res) => {
-    // const bookId = req.params.bookId;
-    // const criticId = req.body.critic;
-    const bookId = "8";
-    const criticId = "4";
+    const bookId = req.params.bookId;
+    const criticId = req.body.critic;
     const reviewContent = req.body.review;
-    const newData = { criticId, reviewContent, bookId }
     
     let book = {};
     let critics = [];
 
     try {
-
-        // book = await bookService.getById(bookId);
-        // critics = await criticService.getAll({ excludeIds: book.critics.map((x) => x.criticId) });
         
         const parsedData = createReviewSchema.parse({ criticId, reviewContent, bookId })
         
